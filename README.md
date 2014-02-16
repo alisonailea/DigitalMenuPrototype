@@ -9,10 +9,10 @@ This app is built using AngularJS on the front, Express + Node on the back. Styl
 ## Getting Started
 
 ### Tools you will need
-Git (<http://git-scm.com/book/en/Getting-Started-Installing-Git>)
-Node (<http://nodejs.org/download/>)
-Ruby (<http://www.rubyinstaller.org/>)
-SASS (<http://sass-lang.com/install>)
+  Git (<http://git-scm.com/book/en/Getting-Started-Installing-Git>)
+  Node (<http://nodejs.org/download/>)
+  Ruby (<http://www.rubyinstaller.org/>)
+  SASS (<http://sass-lang.com/install>)
 
 ## Steps
 1. Clone the repository
