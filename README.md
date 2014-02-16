@@ -15,8 +15,12 @@ This app is built using AngularJS on the front, Express + Node on the back. Styl
   SASS (<http://sass-lang.com/install>)
 
 ## Steps
-1. Clone the repository
-2. Inside the project folder run `npm install` to grab the node dependencies
+1. Fork the project repository
+2. Clone your Fork to your computer
+3. Inside the project folder run `npm install` to grab the node dependencies
+4. Do any work you see fit
+5. Commit and Push back up to your Project Fork
+6. Send a pull request back to this Repository.
 
 ### To run the server
 On the top level of the project run 'node app.js'
