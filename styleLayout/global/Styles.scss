@@ -1,0 +1,12 @@
+// /* Global Application style rules */
+
+body {
+    background-color: $backgroundColor-main;
+}
+
+.header{
+	background-color: $backgroundColor-header;
+	ul{
+		background-color: $backgroundColor-header;
+	}
+}

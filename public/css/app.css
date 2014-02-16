@@ -1,30 +1,54 @@
-/* app css stylesheet */
-
-.menu {
-  list-style: none;
-  border-bottom: 0.1em solid black;
-  margin-bottom: 2em;
-  padding: 0 0 0.5em;
-}
-
-.menu:before {
-  content: "[";
-}
-
-.menu:after {
-  content: "]";
-}
-
-.menu > li {
-  display: inline;
-}
-
-.menu > li:before {
-  content: "|";
-  padding-right: 0.3em;
-}
-
-.menu > li:nth-child(1):before {
-  content: "";
+/* Global Application Style & Layout */
+/* Layout */
+html, body, div {
+  margin: 0;
   padding: 0;
-}
+  width: 100%; }
+
+html, .app {
+  height: 100%; }
+
+body {
+  min-height: 100%; }
+
+.clearfix:before,
+.clearfix:after {
+  content: " ";
+  display: table; }
+
+.clearfix:after {
+  clear: both; }
+
+.header div {
+  position: relative;
+  display: inline-block;
+  width: 33%; }
+.header ul {
+  visibility: hidden;
+  display: block;
+  position: absolute;
+  width: 100%;
+  text-align: left;
+  margin: 0; }
+.header .menu {
+  float: left;
+  text-align: left; }
+.header .order {
+  float: right;
+  text-align: right; }
+.header .menu:hover > ul {
+  visibility: visible; }
+.header .order:hover > ul {
+  visibility: visible; }
+
+.app {
+  text-align: center; }
+
+/* Styles  */
+body {
+  background-color: white; }
+
+.header {
+  background-color: #cccccc; }
+  .header ul {
+    background-color: #cccccc; }

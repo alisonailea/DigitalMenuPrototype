@@ -1,0 +1,8 @@
+<ul>
+    <li ng-repeat='item in orderItems'>
+		{{item.name}} {{item.cost}} {{item.quantity}}
+	</li>
+</ul>
+<button class="text" ng-click="resetOrder()">cancel your order</button>
+<button ng-click="placeOrder()">Send Your Order</button>
+<div class="total">Total: <span ng-bind="order.total"></span></div>

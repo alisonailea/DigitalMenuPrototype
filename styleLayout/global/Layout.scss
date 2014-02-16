@@ -1,0 +1,56 @@
+// /* Global Application layout rules*/
+html, body, div {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+}
+html, .app{
+  height: 100%;
+}
+body {
+  min-height: 100%;
+}
+
+.clearfix:before,
+.clearfix:after {
+    content: " ";
+    display: table;
+}
+
+.clearfix:after {
+    clear: both;
+}
+
+.header {
+    div {
+        position: relative;
+        display: inline-block;
+        width: 33%;
+    }
+    ul{
+        visibility: hidden;
+        display: block;
+        position: absolute;
+        width: 100%;
+        text-align: left;
+        margin: 0;
+    }
+    .menu {
+        float: left;
+        text-align: left;
+    }
+    .order {
+        float: right;
+        text-align: right;
+    }
+    .menu:hover > ul {
+        visibility: visible;
+    }
+    .order:hover > ul{
+        visibility: visible;
+    }
+}
+
+.app {
+    text-align: center;
+}

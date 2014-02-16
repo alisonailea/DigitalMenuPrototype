@@ -1,33 +1,29 @@
-# Angular Express Seed
+# Digital Menu Ordering System Prototype 
 
-Start an awesome app with AngularJS on the front, Express + Node on the back. This project is an
-application skeleton for a typical [AngularJS](http://angularjs.org/) web app for those who want
-to use Node to serve their app.
+## Aknowledgments
+This project is built on top of the Angular Express Seed With HTML (<https://github.com/dannyrdalton/angular-express-seed-with-html>) which is turn is adapted from Brian Ford's Angular Express Seed (<https://github.com/btford/angular-express-seed>).
 
-The seed contains angular libraries, test libraries and a bunch of scripts all preconfigured for
-instant web development gratification. Just clone the repo (or download the zip/tarball) and
-you're ready to develop your application.
+## Intro
+This app is built using AngularJS on the front, Express + Node on the back. Styled with SASS/SCSS.
 
-The seed app shows how to wire together Angular client-side components with Express on the server.
-It also illustrates writing angular partials/views with the Jade templating library.
+## Getting Started
 
-_Note: Although Jade supports interpolation, you should be doing that mostly on the client. Mixing
-server and browser templating will convolute your app. Instead, use Jade as a syntactic sugar for
-HTML, and let AngularJS take care of interpolation on the browser side._
+### Tools you will need
+Git (<http://git-scm.com/book/en/Getting-Started-Installing-Git>)
+Node (<http://nodejs.org/download/>)
+Ruby (<http://www.rubyinstaller.org/>)
+SASS (<http://sass-lang.com/install>)
 
-## How to use angular-express-seed
+## Steps
+1. Clone the repository
+2. Inside the project folder run `npm install` to grab the node dependencies
 
-Clone the angular-express-seed repository, run `npm install` to grab the dependencies, and start hacking!
+### To run the server
+On the top level of the project run 'node app.js'
 
-### Running the app
+### To convert SASS/SCSS to CSS
+On the top level of the project run 'sass --watch styleLayout/app.scss:public/css/app.css'
 
-Runs like a typical express app:
-
-    node app.js
-
-### Running tests
-
-Coming soon!
 
 ### Receiving updates from upstream
 
@@ -40,11 +36,11 @@ Just fetch the changes and merge them into your project with git.
     package.json        --> for npm
     public/             --> all of the files to be used in on the client side
       css/              --> css files
-        app.css         --> default stylesheet
+        app.css         --> final stylesheet (Don't Edit)
       img/              --> image files
       js/               --> javascript files
         app.js          --> declare top-level app module
-        controllers.js  --> application controllers
+        controllers.js  --> application controllers - Where most of our javascript should go
         directives.js   --> custom angular directives
         filters.js      --> custom angular filters
         services.js     --> custom angular services
@@ -54,28 +50,20 @@ Just fetch the changes and merge them into your project with git.
             angular.min.js        --> the latest minified angular js
             angular-*.js          --> angular add-on modules
             version.txt           --> version number
+    styleLayout/         --> SCSS stylesheets
+      global/            --> stylesheets that apply application-wide
+        Layout.scss           --> layout rules like height, width, margin
+        Styles.scss           --> style rules like color, background-color, font-size
+        Variable.scss         --> variable rules to apply to other files
+      app.scss           --> file to include all other files in one place.
     routes/
       api.js            --> route for serving JSON
       index.js          --> route for serving HTML pages and partials
     views/
-      index.jade        --> main page for app
-      layout.jade       --> doctype, title, head boilerplate
-      partials/         --> angular view partials (partial jade templates)
-        partial1.jade
-        partial2.jade
-
-
-
-## Example App
-
-A simple [blog](https://github.com/btford/angular-express-blog) based on this seed.
-
-
-## Contact
-
-For more information on AngularJS please check out http://angularjs.org/
-For more on Express and Jade, http://expressjs.com/ and http://jade-lang.com/ are
-your friends.
-
-## License
-MIT
+      index.html        --> main page for app
+      partials/         --> angular view partials (partial html files)
+        about.html
+        appetizer.html
+        home.html
+        orderPlaced.html
+        reviewOrder.html
