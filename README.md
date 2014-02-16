@@ -1,6 +1,6 @@
 # Digital Menu Ordering System Prototype 
 
-## Aknowledgments
+## Acknowledgments
 This project is built on top of the Angular Express Seed With HTML (<https://github.com/dannyrdalton/angular-express-seed-with-html>) which is turn is adapted from Brian Ford's Angular Express Seed (<https://github.com/btford/angular-express-seed>).
 
 ## Intro
