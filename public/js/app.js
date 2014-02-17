@@ -27,6 +27,18 @@ config(function ($routeProvider, $locationProvider) {
       templateUrl: 'partials/appetizer',
       controller: 'AppetizerCtrl'
     }).
+    when('/entrees', {
+      templateUrl: 'partials/entrees',
+      controller: 'EntreeCtrl'
+    }).
+    when('/desserts', {
+      templateUrl: 'partials/desserts',
+      controller: 'DessertCtrl'
+    }).
+    when('/drinks', {
+      templateUrl: 'partials/drinks',
+      controller: 'DrinkCtrl'
+    }).
     when('/reviewOrder', {
       templateUrl: 'partials/reviewOrder',
       controller: 'ReviewOrderCtrl'
