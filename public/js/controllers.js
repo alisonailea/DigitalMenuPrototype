@@ -12,12 +12,34 @@ angular.module('myApp.controllers', []).
     }).
     success(function (data, status, headers, config) {
       $scope.name = data.name;
-      $scope.clientType = data.client;
     }).
     error(function (data, status, headers, config) {
       $scope.name = 'Error!';
     });
-    
+
+    $http({
+      method: 'GET',
+      url: '/api/navigation'
+    }).
+    success(function (data, status, headers, config) {
+      $scope.linkList = data.navigation;
+      // console.log(data.navigation);
+    }).
+    error(function (data, status, headers, config) {
+      $scope.navigation = 'Error!';
+    });
+
+    $http({
+      method: 'GET',
+      url: '/api/menu'
+    }).
+    success(function (data, status, headers, config) {
+      $scope.menu = data.menu;
+    }).
+    error(function (data, status, headers, config) {
+      $scope.menu = 'Error!';
+    });
+
     /* Global Application Variables*/
     /* NOTE: With Angular all variables that you want to reference 
        in the HTML Model they have to start with $scope.
@@ -81,18 +103,7 @@ angular.module('myApp.controllers', []).
   }).
   /* Logic specific to the Home page. */
   controller('HomeCtrl', function ($scope) {
-    /* Data - this should be eventually pulled out to it's own JSON file 
-       and called through an Angular service */
-    $scope.linkList = [
-      {'name': 'Appitizers',
-       'url': 'appetizer'},
-      {'name': 'Entrees',
-       'url': 'entrees'},
-      {'name': 'Dessert',
-       'url': 'dessert'},
-       {'name': 'Drink',
-       'url': 'drink'}
-    ];
+    
     $scope.updatePage('Home');
   }).
   /* Logic specific to the About page. */
@@ -103,20 +114,12 @@ angular.module('myApp.controllers', []).
   controller('AppetizerCtrl', function ($scope) {
     /* Data - this should be eventually pulled out to it's own JSON file 
        and called through an Angular service */
-    $scope.menuList = [
-      {'name': 'Stuffed Mushrooms', 'imgUrl': 'img/appetizer/Mushrooms.png',
-       'description': 'Nunc pretium lectus augue, eget tincidunt arcu suscipit et. Donec vitae nisl in ante condimentum sollicitudin vel id elit.',
-       'cost': '6.00'},
-      {'name': 'Garlic Bread', 'imgUrl': 'img/appetizer/Bread.png',
-       'description': 'Nunc pretium lectus augue, eget tincidunt arcu suscipit et. Donec vitae nisl in ante condimentum sollicitudin vel id elit.',
-       'cost': '5.50'},
-      {'name': 'Antipasto', 'imgUrl': 'img/appetizer/Antipasto.png',
-       'description': 'Nunc pretium lectus augue, eget tincidunt arcu suscipit et. Donec vitae nisl in ante condimentum sollicitudin vel id elit.',
-       'cost': '5.00'},
-    ];
+    $scope.menuList = $scope.menu.appetizers;
+
     $scope.updatePage('Appetizers');
   }).
   /* Logic specific to the Revew your Order page. */
   controller('ReviewOrderCtrl', function ($scope) {
+    
     $scope.updatePage('Review Your Order');
   });

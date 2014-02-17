@@ -31,6 +31,8 @@ app.get('/partials/:name', routes.partials);
 
 // JSON API
 app.get('/api/name', api.name);
+app.get('/api/navigation', api.navigation);
+app.get('/api/menu', api.menu);
 
 // redirect all others to the index (HTML5 history)
 app.get('*', routes.index);

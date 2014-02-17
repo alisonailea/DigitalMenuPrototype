@@ -15,10 +15,7 @@
 				<div class="menu">
 					{{pageName}}
 					<ul class="menu">
-		 				<li><a href="entrees">Entrees</a></li>
-		 				<li><a href="appetizer">Appetizers</a></li>
-				        <li><a href="desserts">Desserts</a></li>
-				        <li><a href="drinks">Drinks</a></li>
+		 				<li ng-repeat='link in linkList'><a href="{{link.location}}">{{link.name}}</a></li>
 						<li><a href="reviewOrder">Place Your Order</a></li>
 			       </ul>
 				</div>
