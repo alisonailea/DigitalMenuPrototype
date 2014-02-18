@@ -95,11 +95,6 @@ angular.module('myApp.controllers', []).
       $scope.orderItems = [];
       $scope.order.total = '0.00';
     };
-
-    $scope.placeOrder = function(){
-      /* write logic to add to order JSON here */
-    };
-
   }).
   /* Logic specific to the Home page. */
   controller('HomeCtrl', function ($scope) {
@@ -143,7 +138,15 @@ angular.module('myApp.controllers', []).
     $scope.updatePage('Drinks');
   }).
   /* Logic specific to the Revew your Order page. */
-  controller('ReviewOrderCtrl', function ($scope) {
+  controller('ReviewOrderCtrl', function ($scope, PostService) {
     
     $scope.updatePage('Review Your Order');
+
+    $scope.placeOrder = function() {
+      /* Use Factory method services.js to make RESTful call to the server */
+        var stuff = $scope.order;
+        PostService.save(stuff, function(data) {
+            console.log(data);
+        });
+    };
   });

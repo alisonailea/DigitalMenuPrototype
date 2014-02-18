@@ -5,7 +5,8 @@
 
 var express = require('express'),
     routes = require('./routes'),
-    api = require('./routes/api');
+    api = require('./routes/api'),
+    fs = require('fs');
 
 var app = module.exports = express();
 
@@ -33,6 +34,18 @@ app.get('/partials/:name', routes.partials);
 app.get('/api/name', api.name);
 app.get('/api/navigation', api.navigation);
 app.get('/api/menu', api.menu);
+
+app.post('/json/output/output.json', function(req, res) {
+	var fileLoc = 'json/output/';
+	var fileName = 'output.json';
+	var data = JSON.stringify(req.body, null, 4);
+    fs.writeFile(fileLoc+fileName, data, function (err) {
+		if (err) throw err;
+		res.end();
+	});
+	// console.log(res);
+
+});
 
 // redirect all others to the index (HTML5 history)
 app.get('*', routes.index);
