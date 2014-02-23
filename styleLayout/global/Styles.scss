@@ -1,12 +1,55 @@
 // /* Global Application style rules */
 
-body {
-    background-color: $backgroundColor-main;
+/* Font Rules */
+html { font-size: 87.5%;  } 
+body { font-size: 14px; font-size: 1rem; line-height: 1;} /* =14px */
+h1, h2 { 
+	font-size: 2.57rem; ///* =36px */
+	font-weight: lighter;
+}
+h2 {
+	text-transform: uppercase;
 }
 
-.header{
-	background-color: $backgroundColor-header;
-	ul{
-		background-color: $backgroundColor-header;
+/* Color Rules */
+body {
+    background-color: $backgroundColor-main;
+    font-family: $sans-serif;
+}
+
+// .header{
+// 	background-color: $backgroundColor-header;
+// 	ul{
+// 		background-color: $backgroundColor-header;
+// 	}
+// }
+// .menu {
+// 	text-align: left;
+// }
+// .order {
+// 	text-align: right;
+// }
+
+//* make all a-links look like buttons
+.btn {
+    color: $font-color-lt;
+    background-color: $background-medium;
+    font-size: 1.29rem;
+    text-decoration: none;
+    
+    &:link, &:hover, &:active, &:visited{
+    	color: $font-color-lt;
+	    background-color: $background-medium;
+	    text-decoration: none;	
+    }
+}
+
+.btn-large{
+	font-size: 1.5rem;
+}
+
+.menuList{
+	.btn{
+		background-color: $background-dark;
 	}
 }

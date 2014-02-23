@@ -1,14 +1,8 @@
 // /* Global Application layout rules*/
-html, body, div {
-    margin: 0;
-    padding: 0;
-    width: 100%;
-}
-html, .app{
-  height: 100%;
-}
-body {
-  min-height: 100%;
+*, *:before, *:after {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 .clearfix:before,
@@ -21,36 +15,120 @@ body {
     clear: both;
 }
 
-.header {
-    div {
-        position: relative;
-        display: inline-block;
-        width: 33%;
-    }
-    ul{
-        visibility: hidden;
-        display: block;
-        position: absolute;
-        width: 100%;
-        text-align: left;
-        margin: 0;
-    }
-    .menu {
-        float: left;
-        text-align: left;
-    }
-    .order {
-        float: right;
-        text-align: right;
-    }
-    .menu:hover > ul {
-        visibility: visible;
-    }
-    .order:hover > ul{
-        visibility: visible;
-    }
+html, body, div {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+}
+html {
+  height: 100%;
+}
+body {
+    display: -webkit-box;   /* OLD: Safari,  iOS, Android browser, older WebKit browsers.  */
+    display: -moz-box;      /* OLD: Firefox (buggy) */ 
+    display: -ms-flexbox;   /* MID: IE 10 */
+    display: -webkit-flex;  /* NEW, Chrome 21–28, Safari 6.1+ */
+    display: flex;          /* NEW: IE11, Chrome 29+, Opera 12.1+, Firefox 22+ */
+
+    -webkit-box-align: center; -moz-box-align: center; /* OLD… */
+    -ms-flex-align: center; /* You know the drill now… */
+    -webkit-align-items: center;
+    align-items: center;
+
+    -webkit-box-pack: center; -moz-box-pack: center; 
+    -ms-flex-pack: center; 
+    -webkit-justify-content: center;
+    justify-content: center;
+
+    margin: 0;
+    height: 100%;
+    width: 100% /* needed for Firefox */
 }
 
 .app {
-    text-align: center;
+    -prefix-box-flex: 1; /* old spec webkit, moz */
+    flex: 1;
+    display: -webkit-box;   /* OLD: Safari,  iOS, Android browser, older WebKit browsers.  */
+    display: -moz-box;      /* OLD: Firefox (buggy) */ 
+    display: -ms-flexbox;   /* MID: IE 10 */
+    display: -webkit-flex;  /* NEW, Chrome 21–28, Safari 6.1+ */
+    display: flex;          /* NEW: IE11, Chrome 29+, Opera 12.1+, Firefox 22+ */
+
+    -webkit-box-align: center; -moz-box-align: center; /* OLD… */
+    -ms-flex-align: center; /* You know the drill now… */
+    -webkit-align-items: center;
+    align-items: center;
+
+    -webkit-box-pack: center; -moz-box-pack: center; 
+    -ms-flex-pack: center; 
+    -webkit-justify-content: center;
+    justify-content: center;
+
+    margin: 0;
+    height: 100%;
+    width: 100% /* needed for Firefox */
 }
+
+.header, .app-content{
+    -prefix-box-flex: 1; /* old spec webkit, moz */
+    flex: 1;
+    width: 100%;
+}
+
+
+//* make all a-links look like buttons
+// .btn {
+//     width: 75%;
+//     padding: 20px 0;
+//     position: relative;
+//     display: block;
+//     margin: 0 auto;
+// }
+
+// .btn-large{
+//     width: 100%;
+//     padding: 30px 20px;
+// }
+
+// .header {
+    
+
+//     div {
+//         // position: relative;
+//         // display: inline-block;
+//         // width: 33%;
+//         padding: 10px 5px;
+//     }
+//     ul{
+//         visibility: hidden;
+//         display: block;
+//         position: absolute;
+//         width: 100%;
+//         text-align: left;
+//         margin: 0;
+//     }
+//     // .menu {
+//     //     float: left;
+//     //     text-align: left;
+//     // }
+//     // .order {
+//     //     float: right;
+//     //     text-align: right;
+//     // }
+//     .menu:hover > ul {
+//         visibility: visible;
+//     }
+//     .order:hover > ul{
+//         visibility: visible;
+//     }
+// }
+
+// .app {
+//     text-align: center;
+// }
+
+// .menuList{
+//     .btn{
+//        margin-top: 15px;
+//     }
+// }
