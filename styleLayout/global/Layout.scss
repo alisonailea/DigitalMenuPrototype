@@ -24,71 +24,90 @@ html {
   height: 100%;
 }
 body {
-    display: -webkit-box;   /* OLD: Safari,  iOS, Android browser, older WebKit browsers.  */
-    display: -moz-box;      /* OLD: Firefox (buggy) */ 
-    display: -ms-flexbox;   /* MID: IE 10 */
-    display: -webkit-flex;  /* NEW, Chrome 21–28, Safari 6.1+ */
-    display: flex;          /* NEW: IE11, Chrome 29+, Opera 12.1+, Firefox 22+ */
-
-    -webkit-box-align: center; -moz-box-align: center; /* OLD… */
-    -ms-flex-align: center; /* You know the drill now… */
-    -webkit-align-items: center;
-    align-items: center;
-
-    -webkit-box-pack: center; -moz-box-pack: center; 
-    -ms-flex-pack: center; 
-    -webkit-justify-content: center;
-    justify-content: center;
-
     margin: 0;
     height: 100%;
     width: 100% /* needed for Firefox */
+}
+h2 {
+    margin-bottom: 0;
 }
 
 .app {
-    -prefix-box-flex: 1; /* old spec webkit, moz */
-    flex: 1;
-    display: -webkit-box;   /* OLD: Safari,  iOS, Android browser, older WebKit browsers.  */
-    display: -moz-box;      /* OLD: Firefox (buggy) */ 
-    display: -ms-flexbox;   /* MID: IE 10 */
-    display: -webkit-flex;  /* NEW, Chrome 21–28, Safari 6.1+ */
-    display: flex;          /* NEW: IE11, Chrome 29+, Opera 12.1+, Firefox 22+ */
+    @include display(flex); 
+    @include flex-direction(column);
+    @include align-items(center);
+    @include justify-content(center);
+    @include align-content(flex-start);
+    @include flex(1);
 
-    -webkit-box-align: center; -moz-box-align: center; /* OLD… */
-    -ms-flex-align: center; /* You know the drill now… */
-    -webkit-align-items: center;
-    align-items: center;
-
-    -webkit-box-pack: center; -moz-box-pack: center; 
-    -ms-flex-pack: center; 
-    -webkit-justify-content: center;
-    justify-content: center;
-
-    margin: 0;
+    margin: 0 0 10px 0;
     height: 100%;
-    width: 100% /* needed for Firefox */
+    width: 100%; /* needed for Firefox */
+    min-height: 620px;
+    & > div {
+       @include flex(1);
+        width: 100%; 
+    }
 }
 
-.header, .app-content{
-    -prefix-box-flex: 1; /* old spec webkit, moz */
-    flex: 1;
-    width: 100%;
+.header {
+    @include display(flex); 
+    @include flex-direction(row);
+    @include align-items(stretch);
+    @include justify-content(space-between);
+    max-height: 8%;
+    
+    & > div {
+        @include flex(1);
+        position: relative;
+
+        & > div{
+            @include display(flex); 
+            @include flex-direction(row);
+            @include align-items(center);
+            @include justify-content(center);
+            @include align-content(center);
+            position: absolute;
+            height: 100%;
+            padding: 0 15px;   
+        }
+        &:active, &:hover{
+            color: red;
+        }
+    }
+    & > div:first-child > div{
+            @include justify-content(flex-start);
+            }
+    & > div:last-child > div{
+        @include justify-content(flex-end);
+    }
+
+    ul {
+        visibility: hidden;
+    }
 }
 
+.app-content{
+    @include display(flex); 
+    @include flex-direction(column);
+    @include align-items(center);
+    @include justify-content(space-between);
+    @include align-content(space-between);  
+}
 
 //* make all a-links look like buttons
-// .btn {
-//     width: 75%;
-//     padding: 20px 0;
-//     position: relative;
-//     display: block;
-//     margin: 0 auto;
-// }
+.btn {
+    width: 85%;
+    padding: 15px 0;
+    position: relative;
+    display: block;
+    margin: 0 auto;
+}
 
-// .btn-large{
-//     width: 100%;
-//     padding: 30px 20px;
-// }
+.btn-large{
+    width: 100%;
+    padding: 20px 10px;
+}
 
 // .header {
     
@@ -127,8 +146,8 @@ body {
 //     text-align: center;
 // }
 
-// .menuList{
-//     .btn{
-//        margin-top: 15px;
-//     }
-// }
+.menuList{
+    .btn{
+       margin-top: 15px;
+    }
+}

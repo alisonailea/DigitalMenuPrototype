@@ -52,6 +52,22 @@ angular.module('myApp.controllers', []).
     /* NOTE: With Angular all variables that you want to reference 
        in the HTML Model they have to start with $scope.
        Read more about Angular $scope at http://angularjs.org/ */
+    $scope.getIcon = function(){
+      var page = $scope.pageName;
+      var icon;
+      switch ($scope.pageName) {
+        case 'Home':
+          icon = 'icon-arrow-down4';
+          break;
+        case 'Review Your Order':
+          icon = 'icon-arrow-up4';
+          break;
+        default:
+          icon = 'icon-menu';
+          break;
+      }
+      return icon;
+    };
 
     $scope.updatePage = function(pageName){
       $scope.pageName = pageName;

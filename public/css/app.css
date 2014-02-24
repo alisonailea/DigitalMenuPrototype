@@ -92,67 +92,231 @@ html {
   height: 100%; }
 
 body {
-  display: -webkit-box;
-  /* OLD: Safari,  iOS, Android browser, older WebKit browsers.  */
-  display: -moz-box;
-  /* OLD: Firefox (buggy) */
-  display: -ms-flexbox;
-  /* MID: IE 10 */
-  display: -webkit-flex;
-  /* NEW, Chrome 21–28, Safari 6.1+ */
-  display: flex;
-  /* NEW: IE11, Chrome 29+, Opera 12.1+, Firefox 22+ */
-  -webkit-box-align: center;
-  -moz-box-align: center;
-  /* OLD… */
-  -ms-flex-align: center;
-  /* You know the drill now… */
-  -webkit-align-items: center;
-  align-items: center;
-  -webkit-box-pack: center;
-  -moz-box-pack: center;
-  -ms-flex-pack: center;
-  -webkit-justify-content: center;
-  justify-content: center;
   margin: 0;
   height: 100%;
   width: 100%; }
+
+h2 {
+  margin-bottom: 0; }
 
 .app {
-  -prefix-box-flex: 1;
-  /* old spec webkit, moz */
-  flex: 1;
   display: -webkit-box;
-  /* OLD: Safari,  iOS, Android browser, older WebKit browsers.  */
   display: -moz-box;
-  /* OLD: Firefox (buggy) */
-  display: -ms-flexbox;
-  /* MID: IE 10 */
+  display: box;
   display: -webkit-flex;
-  /* NEW, Chrome 21–28, Safari 6.1+ */
+  display: -moz-flex;
+  display: -ms-flexbox;
   display: flex;
-  /* NEW: IE11, Chrome 29+, Opera 12.1+, Firefox 22+ */
+  -webkit-box-orient: vertical;
+  -moz-box-orient: vertical;
+  box-orient: vertical;
+  -webkit-flex-direction: column;
+  -moz-flex-direction: column;
+  flex-direction: column;
+  -ms-flex-direction: column;
   -webkit-box-align: center;
   -moz-box-align: center;
-  /* OLD… */
-  -ms-flex-align: center;
-  /* You know the drill now… */
+  box-align: center;
   -webkit-align-items: center;
+  -moz-align-items: center;
+  -ms-align-items: center;
+  -o-align-items: center;
   align-items: center;
+  -ms-flex-align: center;
   -webkit-box-pack: center;
   -moz-box-pack: center;
-  -ms-flex-pack: center;
+  box-pack: center;
   -webkit-justify-content: center;
+  -moz-justify-content: center;
+  -ms-justify-content: center;
+  -o-justify-content: center;
   justify-content: center;
-  margin: 0;
-  height: 100%;
-  width: 100%; }
-
-.header, .app-content {
-  -prefix-box-flex: 1;
-  /* old spec webkit, moz */
+  -ms-flex-pack: center;
+  -webkit-align-content: flex-start;
+  -moz-align-content: flex-start;
+  align-content: flex-start;
+  -ms-flex-line-pack: start;
+  -webkit-box-flex: 1;
+  -moz-box-flex: 1;
+  box-flex: 1;
+  -webkit-flex: 1;
+  -moz-flex: 1;
+  -ms-flex: 1;
   flex: 1;
-  width: 100%; }
+  margin: 0 0 10px 0;
+  height: 100%;
+  width: 100%;
+  /* needed for Firefox */
+  min-height: 620px; }
+  .app > div {
+    -webkit-box-flex: 1;
+    -moz-box-flex: 1;
+    box-flex: 1;
+    -webkit-flex: 1;
+    -moz-flex: 1;
+    -ms-flex: 1;
+    flex: 1;
+    width: 100%; }
+
+.header {
+  display: -webkit-box;
+  display: -moz-box;
+  display: box;
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -moz-box-orient: horizontal;
+  box-orient: horizontal;
+  -webkit-flex-direction: row;
+  -moz-flex-direction: row;
+  flex-direction: row;
+  -ms-flex-direction: row;
+  -webkit-box-align: stretch;
+  -moz-box-align: stretch;
+  box-align: stretch;
+  -webkit-align-items: stretch;
+  -moz-align-items: stretch;
+  -ms-align-items: stretch;
+  -o-align-items: stretch;
+  align-items: stretch;
+  -ms-flex-align: stretch;
+  -webkit-box-pack: justify;
+  -moz-box-pack: justify;
+  box-pack: justify;
+  -webkit-justify-content: space-between;
+  -moz-justify-content: space-between;
+  -ms-justify-content: space-between;
+  -o-justify-content: space-between;
+  justify-content: space-between;
+  -ms-flex-pack: justify;
+  max-height: 8%; }
+  .header > div {
+    -webkit-box-flex: 1;
+    -moz-box-flex: 1;
+    box-flex: 1;
+    -webkit-flex: 1;
+    -moz-flex: 1;
+    -ms-flex: 1;
+    flex: 1;
+    position: relative; }
+    .header > div > div {
+      display: -webkit-box;
+      display: -moz-box;
+      display: box;
+      display: -webkit-flex;
+      display: -moz-flex;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-orient: horizontal;
+      -moz-box-orient: horizontal;
+      box-orient: horizontal;
+      -webkit-flex-direction: row;
+      -moz-flex-direction: row;
+      flex-direction: row;
+      -ms-flex-direction: row;
+      -webkit-box-align: center;
+      -moz-box-align: center;
+      box-align: center;
+      -webkit-align-items: center;
+      -moz-align-items: center;
+      -ms-align-items: center;
+      -o-align-items: center;
+      align-items: center;
+      -ms-flex-align: center;
+      -webkit-box-pack: center;
+      -moz-box-pack: center;
+      box-pack: center;
+      -webkit-justify-content: center;
+      -moz-justify-content: center;
+      -ms-justify-content: center;
+      -o-justify-content: center;
+      justify-content: center;
+      -ms-flex-pack: center;
+      -webkit-align-content: center;
+      -moz-align-content: center;
+      align-content: center;
+      -ms-flex-line-pack: center;
+      position: absolute;
+      height: 100%;
+      padding: 0 15px; }
+    .header > div:active, .header > div:hover {
+      color: red; }
+  .header > div:first-child > div {
+    -webkit-box-pack: start;
+    -moz-box-pack: start;
+    box-pack: start;
+    -webkit-justify-content: flex-start;
+    -moz-justify-content: flex-start;
+    -ms-justify-content: flex-start;
+    -o-justify-content: flex-start;
+    justify-content: flex-start;
+    -ms-flex-pack: start; }
+  .header > div:last-child > div {
+    -webkit-box-pack: end;
+    -moz-box-pack: end;
+    box-pack: end;
+    -webkit-justify-content: flex-end;
+    -moz-justify-content: flex-end;
+    -ms-justify-content: flex-end;
+    -o-justify-content: flex-end;
+    justify-content: flex-end;
+    -ms-flex-pack: end; }
+  .header ul {
+    visibility: hidden; }
+
+.app-content {
+  display: -webkit-box;
+  display: -moz-box;
+  display: box;
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -moz-box-orient: vertical;
+  box-orient: vertical;
+  -webkit-flex-direction: column;
+  -moz-flex-direction: column;
+  flex-direction: column;
+  -ms-flex-direction: column;
+  -webkit-box-align: center;
+  -moz-box-align: center;
+  box-align: center;
+  -webkit-align-items: center;
+  -moz-align-items: center;
+  -ms-align-items: center;
+  -o-align-items: center;
+  align-items: center;
+  -ms-flex-align: center;
+  -webkit-box-pack: justify;
+  -moz-box-pack: justify;
+  box-pack: justify;
+  -webkit-justify-content: space-between;
+  -moz-justify-content: space-between;
+  -ms-justify-content: space-between;
+  -o-justify-content: space-between;
+  justify-content: space-between;
+  -ms-flex-pack: justify;
+  -webkit-align-content: space-between;
+  -moz-align-content: space-between;
+  align-content: space-between;
+  -ms-flex-line-pack: justify; }
+
+.btn {
+  width: 85%;
+  padding: 15px 0;
+  position: relative;
+  display: block;
+  margin: 0 auto; }
+
+.btn-large {
+  width: 100%;
+  padding: 20px 10px; }
+
+.menuList .btn {
+  margin-top: 15px; }
 
 /* Styles  */
 /* Font Rules */
@@ -165,11 +329,13 @@ body {
   line-height: 1; }
 
 /* =14px */
-h1, h2 {
+h1 {
   font-size: 2.57rem;
   font-weight: lighter; }
 
 h2 {
+  font-size: 2.286rem;
+  font-weight: lighter;
   text-transform: uppercase; }
 
 /* Color Rules */
@@ -177,14 +343,30 @@ body {
   background-color: white;
   font-family: "OpenSansRegular", OpenSansRegular, "Helvetica Neue", Helvetica, Arial, sans-serif; }
 
+.header {
+  font-size: 24px; }
+  .header > div {
+    background-color: #666666;
+    color: white;
+    text-align: center;
+    font-size: 24px; }
+  .header > div:first-child {
+    text-align: left; }
+  .header > div:last-child {
+    text-align: right;
+    font-size: 18px; }
+
+.app-content {
+  text-align: center; }
+
 .btn {
   color: white;
-  background-color: #cbcbcb;
+  background-color: #666666;
   font-size: 1.29rem;
   text-decoration: none; }
   .btn:link, .btn:hover, .btn:active, .btn:visited {
     color: white;
-    background-color: #cbcbcb;
+    background-color: #666666;
     text-decoration: none; }
 
 .btn-large {
@@ -445,5 +627,11 @@ body {
 
 .icon-twitter:before {
   content: "\e64f"; }
+
+.icon-arrow-down4:before {
+  content: "\e650"; }
+
+.icon-arrow-up4:before {
+  content: "\e651"; }
 
 /*@ sourceMappingURL=app.css.map */
