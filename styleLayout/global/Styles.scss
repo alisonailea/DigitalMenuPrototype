@@ -35,6 +35,9 @@ body {
        text-align: right;
        font-size: 18px;
     }
+    ul{
+        background: rgba($background-dark, .7);
+    }
 }
 
 .app-content{

@@ -116,6 +116,13 @@ angular.module('myApp.controllers', []).
       /* write logic to add to order JSON here */
     };
 
+    // var headerDivs = document.getElementById('header');
+    // headerDivs.click(activateNav());
+    // var activateNav = function(){
+    //   var nav = this.getAttribute('data-nav');
+    //   document.getElementsByTagName()
+    // }
+
   }).
   /* Logic specific to the Home page. */
   controller('HomeCtrl', function ($scope) {

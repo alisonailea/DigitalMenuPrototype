@@ -149,6 +149,13 @@ h2 {
   /* needed for Firefox */
   min-height: 620px; }
   .app > div {
+    -webkit-box-flex: 1;
+    -moz-box-flex: 1;
+    box-flex: 1;
+    -webkit-flex: 1;
+    -moz-flex: 1;
+    -ms-flex: 1;
+    flex: 1;
     width: 100%; }
 
 .header {
@@ -184,7 +191,7 @@ h2 {
   -o-justify-content: space-between;
   justify-content: space-between;
   -ms-flex-pack: justify;
-  height: 8%; }
+  max-height: 8%; }
   .header > div {
     -webkit-box-flex: 1;
     -moz-box-flex: 1;
@@ -234,8 +241,8 @@ h2 {
       position: absolute;
       height: 100%;
       padding: 0 15px; }
-    .header > div:active ul, .header > div:hover ul {
-      visibility: visible; }
+    .header > div:active, .header > div:hover {
+      color: red; }
   .header > div:first-child > div {
     -webkit-box-pack: start;
     -moz-box-pack: start;
@@ -259,21 +266,7 @@ h2 {
   .header ul {
     visibility: hidden; }
 
-ul.nav {
-  position: absolute;
-  top: 8%;
-  left: 0;
-  width: 100%;
-  height: 100%; }
-
 .app-content {
-  -webkit-box-flex: 1;
-  -moz-box-flex: 1;
-  box-flex: 1;
-  -webkit-flex: 1;
-  -moz-flex: 1;
-  -ms-flex: 1;
-  flex: 1;
   display: -webkit-box;
   display: -moz-box;
   display: box;
@@ -362,8 +355,6 @@ body {
   .header > div:last-child {
     text-align: right;
     font-size: 18px; }
-  .header ul {
-    background: rgba(51, 51, 51, 0.7); }
 
 .app-content {
   text-align: center; }
@@ -642,5 +633,3 @@ body {
 
 .icon-arrow-up4:before {
   content: "\e651"; }
-
-/*@ sourceMappingURL=app.css.map */
