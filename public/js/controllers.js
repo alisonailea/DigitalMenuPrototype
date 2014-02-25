@@ -52,6 +52,22 @@ angular.module('myApp.controllers', []).
     /* NOTE: With Angular all variables that you want to reference 
        in the HTML Model they have to start with $scope.
        Read more about Angular $scope at http://angularjs.org/ */
+    $scope.getIcon = function(){
+      var page = $scope.pageName;
+      var icon;
+      switch ($scope.pageName) {
+        case 'Home':
+          icon = 'icon-arrow-down4';
+          break;
+        case 'Review Your Order':
+          icon = 'icon-arrow-up4';
+          break;
+        default:
+          icon = 'icon-menu';
+          break;
+      }
+      return icon;
+    };
 
     $scope.updatePage = function(pageName){
       $scope.pageName = pageName;
@@ -95,6 +111,18 @@ angular.module('myApp.controllers', []).
       $scope.orderItems = [];
       $scope.order.total = '0.00';
     };
+
+    $scope.placeOrder = function(){
+      /* write logic to add to order JSON here */
+    };
+
+    // var headerDivs = document.getElementById('header');
+    // headerDivs.click(activateNav());
+    // var activateNav = function(){
+    //   var nav = this.getAttribute('data-nav');
+    //   document.getElementsByTagName()
+    // }
+
   }).
   /* Logic specific to the Home page. */
   controller('HomeCtrl', function ($scope) {

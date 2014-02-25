@@ -1,12 +1,69 @@
 // /* Global Application style rules */
 
-body {
-    background-color: $backgroundColor-main;
+/* Font Rules */
+html { font-size: 87.5%;  } 
+body { font-size: 14px; font-size: 1rem; line-height: 1;} /* =14px */
+h1{ 
+	font-size: 2.57rem; ///* =36px */
+	font-weight: lighter;
+}
+h2 {
+    font-size: 2.286rem;
+    font-weight: lighter;
+	text-transform: uppercase;
 }
 
-.header{
-	background-color: $backgroundColor-header;
-	ul{
-		background-color: $backgroundColor-header;
+/* Color Rules */
+body {
+    background-color: $backgroundColor-main;
+    font-family: $sans-serif;
+}
+
+.header {
+	font-size: 24px;
+	& > div{
+		background-color: $background-medium;
+		color: $font-color-lt;
+		text-align: center;
+        font-size: 24px;
+    }
+    
+    & > div:first-child{
+       text-align: left;
+    }
+    & > div:last-child{
+       text-align: right;
+       font-size: 18px;
+    }
+    ul{
+        background: rgba($background-dark, .7);
+    }
+}
+
+.app-content{
+    text-align: center;
+}
+
+//* make all a-links look like buttons
+.btn {
+    color: $font-color-lt;
+    background-color: $background-medium;
+    font-size: 1.29rem;
+    text-decoration: none;
+    
+    &:link, &:hover, &:active, &:visited{
+    	color: $font-color-lt;
+	    background-color: $background-medium;
+	    text-decoration: none;	
+    }
+}
+
+.btn-large{
+	font-size: 1.5rem;
+}
+
+.menuList{
+	.btn{
+		background-color: $background-dark;
 	}
 }

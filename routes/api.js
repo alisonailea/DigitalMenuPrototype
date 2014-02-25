@@ -25,7 +25,7 @@ exports.menu = function (req, res) {
 			'appetizers': [
 				{
 					'name': 'Stuffed Mushrooms',
-					'imgUrl': 'img/appetizer/Mushrooms.png',
+					'imgUrl': 'img/appetizer/Mushrooms.jpg',
 					'description': 'Nunc pretium lectus augue, eget tincidunt arcu suscipit et. Donec vitae nisl in ante condimentum sollicitudin vel id elit.',
 					'cost': '6.00'
 				},

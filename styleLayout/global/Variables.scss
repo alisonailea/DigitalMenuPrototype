@@ -2,3 +2,12 @@
 
 $backgroundColor-main: #fff;
 $backgroundColor-header: #ccc;
+$background-medium: #666;
+$background-dark: #333;
+
+$font-color-lt: #fff;
+
+
+// Convenience Variables (Global) with fallbacks (in case the font doesn't deliver)
+$sans-serif: 'OpenSansRegular', OpenSansRegular, 'Helvetica Neue', Helvetica, Arial, sans-serif !default;
+$icon-font: 'fontello' !default;

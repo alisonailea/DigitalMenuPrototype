@@ -1,4 +1,11 @@
 /* Global Application Style & Layout */
+/* Import Bourbon */
+@import 'bourbon/bourbon';
+
+@import 'mixins/all';
+
+/* Typography */
+@import 'global/Typography';
 
 // /* Variables */
 @import 'global/Variables';
@@ -8,3 +15,6 @@
 
 /* Styles  */
 @import 'global/Styles';
+
+/* Font Icons */
+@import 'global/Icons';
