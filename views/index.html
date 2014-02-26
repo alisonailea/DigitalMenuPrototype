@@ -15,7 +15,7 @@
 		<div ng-controller="AppCtrl" class="app">
 			<div class="header Grid">
 				<div class="order Grid-cell">
-		       		<div class="order"><span class="icon-text2"></span></div>
+		       		<div class="order" ng-click="openMenu($event)"><span class="icon-text2"></span></div>
 					<ul class="nav">
 						<li><h3>Your Order</h3></li>
 					    <li ng-repeat='item in orderItems'>
@@ -29,7 +29,7 @@
 					</ul>
 		       	</div>
 				<div class="menu Grid-cell">
-					<div class="pageName">
+					<div class="pageName" ng-click="openMenu()">
 						<span ng-class="getIcon()"></span> {{pageName}}
 					</div>
 					<ul class="nav">
@@ -49,11 +49,13 @@
 		</div>
 		<script type="text/javascript" src="js/lib/angular/angular.js"></script>
 		<script type="text/javascript" src="js/lib/angular/angular-resource.js"></script>
+		<script type="text/javascript" src="js/lib/angular/angular-touch.js"></script>
         <script type="text/javascript" src="js/app.js"></script>
         <script type="text/javascript" src="js/services.js"></script>
         <script type="text/javascript" src="js/controllers.js"></script>
         <script type="text/javascript" src="js/filters.js"></script>
         <script type="text/javascript" src="js/directives.js"></script>
+        <script type="text/javascript" src="js/script.js"></script>
 	</body>
 </html>
 

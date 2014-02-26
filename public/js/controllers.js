@@ -112,16 +112,10 @@ angular.module('myApp.controllers', []).
       $scope.order.total = '0.00';
     };
 
-    $scope.placeOrder = function(){
+    $scope.openMenu = function(e){
+      console.log(e);
       /* write logic to add to order JSON here */
     };
-
-    // var headerDivs = document.getElementById('header');
-    // headerDivs.click(activateNav());
-    // var activateNav = function(){
-    //   var nav = this.getAttribute('data-nav');
-    //   document.getElementsByTagName()
-    // }
 
   }).
   /* Logic specific to the Home page. */
