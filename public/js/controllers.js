@@ -114,6 +114,7 @@ angular.module('myApp.controllers', []).
 
     $scope.placeOrder = function(){
       /* write logic to add to order JSON here */
+    	$scope.updatePage('Order Confirmed');
     };
 
     // var headerDivs = document.getElementById('header');
@@ -169,4 +170,9 @@ angular.module('myApp.controllers', []).
   controller('ReviewOrderCtrl', function ($scope) {
     
     $scope.updatePage('Review Your Order');
+  });
+  /* Logic specific to the Confirm your Order page. */
+  controller('ConfirmOrderCtrl', function ($scope) {
+    
+    $scope.updatePage('Order Confirmed');
   });

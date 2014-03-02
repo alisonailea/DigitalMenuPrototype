@@ -1,12 +1,14 @@
 <ul cass="menulist">
 	<li ng-repeat='item in menuList'>
-		<img src="{{item.imgUrl}}" alt="">
 		<div class="header">
 			<div class="title">{{item.name}}</div>
 			<div class="cost">{{item.cost}}</div>
 		</div>
 		<div class="content">
 			<div class="description">{{item.description}}</div>
+		</div>
+		<img src="{{item.imgUrl}}" alt="">
+		<div class="content">
 			<div class="quantity" ng-bind="getQuantity(item.name)"></div>
 		</div>
 		<button class="order" ng-click="addToOrder(item.name, item.cost, 1)">Add to Order</button>
