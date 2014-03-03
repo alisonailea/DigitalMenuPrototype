@@ -52,22 +52,47 @@ angular.module('myApp.controllers', []).
     /* NOTE: With Angular all variables that you want to reference 
        in the HTML Model they have to start with $scope.
        Read more about Angular $scope at http://angularjs.org/ */
-    $scope.getIcon = function(){
-      var page = $scope.pageName;
-      var icon;
-      switch ($scope.pageName) {
-        case 'Home':
-          icon = 'icon-arrow-down4';
-          break;
-        case 'Review Your Order':
-          icon = 'icon-arrow-up4';
-          break;
-        default:
-          icon = 'icon-menu';
-          break;
+
+    var checkClick = function(element){
+      // When bound to document it listens 
+      var parentList = angular.element(element.toElement).parents();
+      var isMenu = false;
+
+      for(var i=0; i<parentList.length; i++){
+        var bodyMatch = angular.element(parentList[i]).is('body');
+        var classMatch = angular.element(parentList[i]).hasClass('show');
+        var linkMatch = angular.element('a');
+
+        if(bodyMatch){ break; }
+        else {
+          if(classMatch && !linkMatch){
+            isMenu = true;
+          }
+        }
       }
-      return icon;
+
+      if(!isMenu){
+        angular.element('.show').removeClass('show');
+        document.removeEventListener('click');
+      }
     };
+
+    // $scope.getIcon = function(){
+    //   var page = $scope.pageName;
+    //   var icon;
+    //   switch ($scope.pageName) {
+    //     case 'Home':
+    //       icon = 'icon-arrow-down4';
+    //       break;
+    //     case 'Review Your Order':
+    //       icon = 'icon-arrow-up4';
+    //       break;
+    //     default:
+    //       icon = 'icon-menu';
+    //       break;
+    //   }
+    //   return icon;
+    // };
 
     $scope.updatePage = function(pageName){
       $scope.pageName = pageName;
@@ -82,7 +107,7 @@ angular.module('myApp.controllers', []).
         }
       }
       if (count > 0){
-        return '+'+count;
+        return 'Quantity: +'+count;
       }
     };
 
@@ -112,9 +137,12 @@ angular.module('myApp.controllers', []).
       $scope.order.total = '0.00';
     };
 
-    $scope.openMenu = function(e){
-      console.log(e);
-      /* write logic to add to order JSON here */
+    $scope.openMenu = function(component){
+      console.log(component);
+      var element = angular.element('.'+component);
+      element.addClass('show');
+
+      document.addEventListener('mouseup', checkClick, false);
     };
 
   }).

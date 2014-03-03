@@ -8,45 +8,47 @@
 		<meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" href="css/normalize.css">
-        <link rel="stylesheet" href="//code.jquery.com/mobile/1.4.0/jquery.mobile-1.4.0.min.css">
+        <!-- <link rel="stylesheet" href="//code.jquery.com/mobile/1.4.0/jquery.mobile-1.4.0.min.css"> -->
 		<link rel="stylesheet" href="css/app.css">
+		<script type="text/javascript" src="js/lib/jquery.min.js"></script>
 	</head>
-	<body>
-		<div ng-controller="AppCtrl" class="app">
-			<div class="header Grid">
-				<div class="order Grid-cell">
-		       		<div class="order" ng-click="openMenu($event)"><span class="icon-text2"></span></div>
-					<ul class="nav">
-						<li><h3>Your Order</h3></li>
-					    <li ng-repeat='item in orderItems'>
-			       			{{item.name}} {{item.cost}} {{item.quantity}}
-			       		</li>
-			       		<li>
-			       			<button class="text" ng-click="resetOrder()">reset</button>
-							<div class="total">Total: <span ng-bind="order.total"></span></div>
-							<a href="reviewOrder">Place Your Order</a>
-			       		</li>
-					</ul>
-		       	</div>
-				<div class="menu Grid-cell">
-					<div class="pageName" ng-click="openMenu()">
-						<span ng-class="getIcon()"></span> {{pageName}}
-					</div>
-					<ul class="nav">
-		 				<li ng-repeat='link in linkList'><a href="{{link.location}}">{{link.name}}</a></li>
-						<li ng-if="pageName !== Home"><span class="icon-home"></span><a href="home">Home</a></li>
-						<li><a href="reviewOrder">Place Your Order</a></li>
-			       </ul>
+	<body ng-controller="AppCtrl" >
+		<div class="app">
+			<div class="header">
+				<div class="menu" ng-click="openMenu('navList')">
+					<span class="icon-list"></span>
 				</div>
-				<div class="help Grid-cell">
-					<div class="help">
-						<span class="icon-info"></span>
-					</div>
+				<div class="order" ng-click="openMenu('orderList')"><span class="icon-text2"></span> Order</div>
+				<div class="help">
+					<span class="icon-info"></span>
 				</div>
 	 		</div>
-		      
+		    
 			<div class="app-content" ng-view></div>
 		</div>
+
+		<div class="orderList slideMenu">
+			<ul>
+				<li><h2>Your Order</h2></li>
+			    <li ng-repeat='item in orderItems'>
+	       			{{item.name}} {{item.cost}} {{item.quantity}}
+	       		</li>
+	       		<li>
+	       			<button class="text" ng-click="resetOrder()">reset</button>
+					<div class="total">Total: <span ng-bind="order.total"></span></div>
+					<a href="reviewOrder">Place Your Order</a>
+	       		</li>
+			</ul>
+	    </div>
+	    <div class="navList slideMenu">
+	    	<ul>
+ 				<li ng-repeat='link in linkList'><a href="{{link.location}}">{{link.name}}</a></li>
+				<li ng-if="pageName !== Home"><span class="icon-home"></span><a href="home">Home</a></li>
+				<li><a href="reviewOrder">Place Your Order</a></li>
+	       </ul>
+	    </div>
+
+	    <!-- Scripts -->
 		<script type="text/javascript" src="js/lib/angular/angular.js"></script>
 		<script type="text/javascript" src="js/lib/angular/angular-resource.js"></script>
 		<script type="text/javascript" src="js/lib/angular/angular-touch.js"></script>

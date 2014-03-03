@@ -2,19 +2,6 @@
 /* Import Bourbon */
 @import 'bourbon/bourbon';
 
-@import 'mixins/all';
+@import 'global/all';
 
-/* Typography */
-@import 'global/Typography';
-
-// /* Variables */
-@import 'global/Variables';
-
-/* Layout */
-@import 'global/Layout';
-
-/* Styles  */
-@import 'global/Styles';
-
-/* Font Icons */
-@import 'global/Icons';
+@import 'components/all';

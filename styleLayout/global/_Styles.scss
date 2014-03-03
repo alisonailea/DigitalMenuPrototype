@@ -21,11 +21,18 @@ body {
 
 .header {
 	font-size: 24px;
+    background-color: $background-medium;
+    
 	& > div{
-		background-color: $background-medium;
+		
 		color: $font-color-lt;
 		text-align: center;
-        font-size: 24px;
+        font-size: 16px;
+        
+        span{
+            font-size: 24px;
+            vertical-align: text-top;
+        }
     }
     
     & > div:first-child{
@@ -42,6 +49,14 @@ body {
 
 .app-content{
     text-align: center;
+}
+
+ul li {
+    list-style: none;
+    
+    h2{
+        text-align: center;
+    }
 }
 
 //* make all a-links look like buttons

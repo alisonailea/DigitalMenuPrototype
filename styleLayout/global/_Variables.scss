@@ -7,6 +7,12 @@ $background-dark: #333;
 
 $font-color-lt: #fff;
 
+//HEIGHT
+
+$header-height: 8%;
+$header-comp-padding: 5%;
+$menu-topp-padding: $header-height + $header-comp-padding + 1;
+
 
 // Convenience Variables (Global) with fallbacks (in case the font doesn't deliver)
 $sans-serif: 'OpenSansRegular', OpenSansRegular, 'Helvetica Neue', Helvetica, Arial, sans-serif !default;
