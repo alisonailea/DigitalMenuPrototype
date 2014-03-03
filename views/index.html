@@ -8,8 +8,7 @@
 		<meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" href="css/normalize.css">
-        <!-- <link rel="stylesheet" href="//code.jquery.com/mobile/1.4.0/jquery.mobile-1.4.0.min.css"> -->
-		<link rel="stylesheet" href="css/app.css">
+        <link rel="stylesheet" href="css/app.css">
 		<script type="text/javascript" src="js/lib/jquery.min.js"></script>
 	</head>
 	<body ng-controller="AppCtrl" >
@@ -18,9 +17,12 @@
 				<div class="menu" ng-click="openMenu('navList')">
 					<span class="icon-list"></span>
 				</div>
-				<div class="order" ng-click="openMenu('orderList')"><span class="icon-text2"></span> Order</div>
-				<div class="help">
-					<span class="icon-info"></span>
+				<div>{{pageName}}</div>
+				<div>
+					<div class="order" ng-click="openMenu('orderList')"><span class="icon-text2"></span></div>
+					<div class="help">
+						<span class="icon-info"></span>
+					</div>
 				</div>
 	 		</div>
 		    
@@ -42,8 +44,10 @@
 	    </div>
 	    <div class="navList slideMenu">
 	    	<ul>
- 				<li ng-repeat='link in linkList'><a href="{{link.location}}">{{link.name}}</a></li>
-				<li ng-if="pageName !== Home"><span class="icon-home"></span><a href="home">Home</a></li>
+	    		<li><a href="home">Home</a></li>
+	    		<li ng-repeat='link in linkList'>
+ 					<a href="{{link.location}}">{{link.name}}</a>
+ 				</li>
 				<li><a href="reviewOrder">Place Your Order</a></li>
 	       </ul>
 	    </div>

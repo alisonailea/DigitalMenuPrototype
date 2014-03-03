@@ -24,19 +24,19 @@ config(function ($routeProvider, $locationProvider) {
       controller: 'AboutCtrl'
     }).
     when('/appetizer', {
-      templateUrl: 'partials/appetizer',
+      templateUrl: 'partials/menuItems',
       controller: 'AppetizerCtrl'
     }).
     when('/entrees', {
-      templateUrl: 'partials/entrees',
+      templateUrl: 'partials/menuItems',
       controller: 'EntreeCtrl'
     }).
     when('/desserts', {
-      templateUrl: 'partials/desserts',
+      templateUrl: 'partials/menuItems',
       controller: 'DessertCtrl'
     }).
     when('/drinks', {
-      templateUrl: 'partials/drinks',
+      templateUrl: 'partials/menuItems',
       controller: 'DrinkCtrl'
     }).
     when('/reviewOrder', {

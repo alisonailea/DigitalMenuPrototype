@@ -47,6 +47,7 @@ angular.module('myApp.controllers', []).
     $scope.orderItems = [];
     $scope.order = {total: '0.00', items: $scope.orderItems};
     $scope.pageName = 'Home';
+    $scope.isHome = true;
 
     /* Global Application Functions */
     /* NOTE: With Angular all variables that you want to reference 
@@ -77,57 +78,65 @@ angular.module('myApp.controllers', []).
       }
     };
 
-    // $scope.getIcon = function(){
-    //   var page = $scope.pageName;
-    //   var icon;
-    //   switch ($scope.pageName) {
-    //     case 'Home':
-    //       icon = 'icon-arrow-down4';
-    //       break;
-    //     case 'Review Your Order':
-    //       icon = 'icon-arrow-up4';
-    //       break;
-    //     default:
-    //       icon = 'icon-menu';
-    //       break;
-    //   }
-    //   return icon;
-    // };
+    $scope.checkPage = function(){
+      var page = $scope.pageName;
+      page = page.toLowerCase();
+      if(page !== 'home'){
+        return true;
+      } else {
+        return false;
+      }
+    }
 
     $scope.updatePage = function(pageName){
       $scope.pageName = pageName;
     };
 
     $scope.getQuantity = function(itemName){
-      /* Show the quantity of each item already in the users order (if it's more than 0)*/
+      var order = $scope.orderItems;
       var count = 0;
-      for (var i = $scope.orderItems.length - 1; i >= 0; i--) {
-        if ($scope.orderItems[i].name === itemName){
-          count += 1;
+      
+      for(var item in order){
+        item = order[item];
+        if(item.name === itemName){
+          return 'Quantity: +' + item.quantity;
         }
-      }
-      if (count > 0){
-        return 'Quantity: +'+count;
       }
     };
 
     $scope.addToOrder = function(name, cost, quantity) {
-      /* Add an item object to the orderItems array */
+      /* Add an item object to the $scope.orderItems array */
+
       var order = $scope.orderItems;
-      var orderItem = {name: name, cost: cost, quantity: quantity};
-      order.push(orderItem);
+      var newItem = true;
+
+      for(var item in order){
+        item = order[item];
+        if(item.name === name){
+          item.quantity += quantity;
+          newItem = false;
+        }
+      }
+ 
+      if (newItem){
+        var orderItem = {name: name, cost: cost, quantity: quantity};
+        order.push(orderItem);
+      }
 
       $scope.updateTotal();
     };
 
     $scope.updateTotal = function(){
-      /* Every time something is added to the order 
-         add up the cost of all the items in the users order */
+      /* 
+        Every time something is added to the order add up 
+        the cost of all the items in the users order 
+      */
       var cost = 0;
-      for (var i = $scope.orderItems.length - 1; i >= 0; i--) {
-          var ammount = parseFloat($scope.orderItems[i].cost);
-          cost += ammount;
-        }
+      for(var item in $scope.orderItems){
+        item = $scope.orderItems[item];
+        var price = parseFloat(item.cost * item.quantity);
+        cost += price;
+      }
       $scope.order.total = cost.toFixed(2);
     };
 
@@ -138,7 +147,6 @@ angular.module('myApp.controllers', []).
     };
 
     $scope.openMenu = function(component){
-      console.log(component);
       var element = angular.element('.'+component);
       element.addClass('show');
 
@@ -148,7 +156,7 @@ angular.module('myApp.controllers', []).
   }).
   /* Logic specific to the Home page. */
   controller('HomeCtrl', function ($scope) {
-    
+    $scope.isHome = true;
     $scope.updatePage('Home');
   }).
   /* Logic specific to the About page. */
