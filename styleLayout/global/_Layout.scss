@@ -32,8 +32,18 @@ body {
     height: 100%;
     width: 100% /* needed for Firefox */
 }
+h1{
+    line-height: 32px;
+    text-align: center;
+}
 h2 {
     margin-bottom: 0;
+    font-size: 2.286rem;
+    font-weight: lighter;
+    text-transform: uppercase;
+    margin-bottom: 15px;
+    line-height: 2.286rem;
+    text-align: center;
 }
 
 button.text{
@@ -75,6 +85,8 @@ button.text{
     width: 100%; 
     position: absolute;
     top: 8%;
+    padding: 10px;
+    line-height: 18px;
 }
 
 //* make all a-links look like buttons
@@ -84,6 +96,7 @@ button.text{
     position: relative;
     display: block;
     margin: 0 auto;
+    text-align: center;
 }
 
 .btn-large{

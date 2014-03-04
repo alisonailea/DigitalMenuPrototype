@@ -11,6 +11,7 @@ h2 {
     font-size: 2.286rem;
     font-weight: lighter;
 	text-transform: uppercase;
+    margin-bottom: 15px;
 }
 
 /* Color Rules */
@@ -49,10 +50,6 @@ body {
     ul{
         background: rgba($background-dark, .7);
     }
-}
-
-.app-content{
-    text-align: center;
 }
 
 ul li {

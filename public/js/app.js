@@ -23,6 +23,10 @@ config(function ($routeProvider, $locationProvider) {
       templateUrl: 'partials/about',
       controller: 'AboutCtrl'
     }).
+    when('/aboutApp', {
+      templateUrl: 'partials/aboutApp',
+      controller: 'AboutCtrl'
+    }).
     when('/appetizer', {
       templateUrl: 'partials/menuItems',
       controller: 'AppetizerCtrl'

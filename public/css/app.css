@@ -95,8 +95,18 @@ body {
   height: 100%;
   width: 100%; }
 
+h1 {
+  line-height: 32px;
+  text-align: center; }
+
 h2 {
-  margin-bottom: 0; }
+  margin-bottom: 0;
+  font-size: 2.286rem;
+  font-weight: lighter;
+  text-transform: uppercase;
+  margin-bottom: 15px;
+  line-height: 2.286rem;
+  text-align: center; }
 
 button.text {
   margin: 0;
@@ -136,14 +146,17 @@ button.text {
 .app-content {
   width: 100%;
   position: absolute;
-  top: 8%; }
+  top: 8%;
+  padding: 10px;
+  line-height: 18px; }
 
 .btn {
   width: 85%;
   padding: 15px 0;
   position: relative;
   display: block;
-  margin: 0 auto; }
+  margin: 0 auto;
+  text-align: center; }
 
 .btn-large {
   width: 100%;
@@ -170,7 +183,8 @@ h1 {
 h2 {
   font-size: 2.286rem;
   font-weight: lighter;
-  text-transform: uppercase; }
+  text-transform: uppercase;
+  margin-bottom: 15px; }
 
 /* Color Rules */
 body {
@@ -197,9 +211,6 @@ body {
     font-size: 18px; }
   .header ul {
     background: rgba(51, 51, 51, 0.7); }
-
-.app-content {
-  text-align: center; }
 
 ul li {
   list-style: none; }
@@ -542,6 +553,48 @@ ul li {
       -moz-transition-duration: 0.8s;
       transition-duration: 0.8s;
       opacity: 1; }
+
+.infoList {
+  -webkit-transition-property: transition-property-names(opacity, "webkit");
+  -moz-transition-property: transition-property-names(opacity, "moz");
+  transition-property: transition-property-names(opacity, false);
+  -webkit-transition-duration: 0.8s;
+  -moz-transition-duration: 0.8s;
+  transition-duration: 0.8s;
+  -webkit-transition-timing-function: ease-out;
+  -moz-transition-timing-function: ease-out;
+  transition-timing-function: ease-out;
+  -webkit-transition-delay: 0.1s;
+  -moz-transition-delay: 0.1s;
+  transition-delay: 0.1s;
+  position: absolute;
+  top: 0px;
+  display: none;
+  top: 8%;
+  padding: 10px; }
+  .infoList ul {
+    position: relative;
+    background: #666;
+    padding: 10px; }
+    .infoList ul:after {
+      bottom: 100%;
+      left: 50%;
+      border: solid transparent;
+      content: " ";
+      height: 0;
+      width: 0;
+      position: absolute;
+      pointer-events: none;
+      border-color: rgba(102, 102, 102, 0);
+      border-bottom-color: #666;
+      border-width: 26px;
+      margin-left: -26px; }
+    .infoList ul li {
+      margin: 5px;
+      padding: 10px; }
+  .infoList.show {
+    display: block;
+    opacity: 1; }
 
 .navList {
   -webkit-box-ordinal-group: 1;

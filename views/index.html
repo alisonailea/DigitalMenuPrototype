@@ -17,7 +17,7 @@
 				<div class="menu" ng-click="openMenu('navList')">
 					<span class="icon-list"></span>
 				</div>
-				<div class="help">
+				<div class="help" ng-click="openMenu('infoList')">
 					<span class="icon-info small"></span>
 				</div>
 				<div class="order" ng-click="openMenu('orderList')"><span class="icon-text2"></span></div>
@@ -36,6 +36,16 @@
 	       			<button class="text" ng-click="resetOrder()">reset</button>
 					<div class="total">Total: <span ng-bind="order.total"></span></div>
 					<a href="reviewOrder" ng-click="placeOrder()" class="btn">Place Your Order</a>
+	       		</li>
+			</ul>
+	    </div>
+	    <div class="infoList slideMenu">
+			<ul>
+				<li><a href="/about">About Us</a></li>
+			    <li><a href="/aboutApp">About the App</a></li>
+	       		<li ng-switch="waiterCalled()">
+	       			<a ng-switch-when="false" ng-click="callWaiter(call)">Call your Waiter</a>
+	       			<a ng-switch-when="true" ng-click="callWaiter(cancel)">Cancel Call to your Waiter</a>
 	       		</li>
 			</ul>
 	    </div>
