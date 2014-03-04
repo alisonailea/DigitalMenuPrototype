@@ -216,10 +216,10 @@ angular.module('myApp.controllers', []).
       PostService.save(orderData, function(data) {
           console.log(data);
           $location.path('/confirmOrder');
-      });
+  });
     };
   }).
-  /* Logic specific to the Order Confirmation page */
-  controller('ConfirmOrderCtrl', function($scope) {
+  /* Logic specific to the Confirm your Order page. */
+  controller('ConfirmOrderCtrl', function ($scope) {
     $scope.updatePage('Order Confirmed');
   });
