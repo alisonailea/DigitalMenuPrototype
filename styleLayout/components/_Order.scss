@@ -1,0 +1,34 @@
+.order-list-items{
+	width: 100%;
+	margin-left: -15px;
+	padding: 10px 20px;
+}
+.orderTools{
+	position: absolute;
+	bottom: 3%;
+	width: 100%;
+	font-size: 18px;
+	
+	.total{
+		margin: 10px 0;
+		width: 100%;
+		margin-left: -15px;
+		text-align: center;
+	}
+	
+	.btn{
+		width: 100%;
+		padding: 5px 10px;
+		text-align: center;
+		margin-left: -15px;
+		border-width: 1px 0;
+		border-style: solid;
+		border-color: transparent;
+		
+		&:hover, &:active{
+			background: #f2f2f2;
+			color: #333;
+			border-color: #666;
+		}
+	}
+}

@@ -78,6 +78,14 @@ angular.module('myApp.controllers', []).
       }
     };
 
+    $scope.orderToolsShown = function(){
+      if($scope.orderItems.length > 0){
+        return true;
+      } else {
+        return false;
+      }
+    };
+
     $scope.checkPage = function(){
       var page = $scope.pageName;
       page = page.toLowerCase();
@@ -196,15 +204,22 @@ angular.module('myApp.controllers', []).
     $scope.updatePage('Drinks');
   }).
   /* Logic specific to the Revew your Order page. */
-  controller('ReviewOrderCtrl', function ($scope, PostService) {
+  controller('ReviewOrderCtrl', function ($scope, $location, PostService) {
     
     $scope.updatePage('Review Your Order');
 
     $scope.placeOrder = function() {
+      // TODO:Imidently start loading icon //
+
       /* Use Factory method services.js to make RESTful call to the server */
-        var stuff = $scope.order;
-        PostService.save(stuff, function(data) {
-            console.log(data);
-        });
+      var orderData = $scope.order;
+      PostService.save(orderData, function(data) {
+          console.log(data);
+          $location.path('/confirmOrder');
+      });
     };
+  }).
+  /* Logic specific to the Order Confirmation page */
+  controller('ConfirmOrderCtrl', function($scope) {
+    $scope.updatePage('Order Confirmed');
   });

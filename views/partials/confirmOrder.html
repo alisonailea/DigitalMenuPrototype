@@ -1,0 +1,8 @@
+<h2>{{pageName}}</h2>
+<p>Thank you for placing the order!</p>
+<ul>
+    <li class="order-list-items" ng-repeat='item in orderItems'>
+		{{item.quantity}} <span class="grey-color">|</span> {{item.name}}
+	</li>
+</ul>
+<p>Your order is placed!</p>

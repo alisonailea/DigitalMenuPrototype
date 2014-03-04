@@ -1,4 +1,15 @@
 {
-    "total": "0.00",
-    "items": []
+    "total": "23.50",
+    "items": [
+        {
+            "name": "Stuffed Mushrooms",
+            "cost": "6.00",
+            "quantity": 3
+        },
+        {
+            "name": "Garlic Bread",
+            "cost": "5.50",
+            "quantity": 1
+        }
+    ]
 }

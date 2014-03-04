@@ -19,8 +19,8 @@
             @include align-items(center);
             @include justify-content(flex-end);
             
-            span{
-                    font-size: 18px;
+            span.small{
+                    font-size: 16px;
             }
             div{
                 @include flex(1);

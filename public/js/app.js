@@ -43,6 +43,10 @@ config(function ($routeProvider, $locationProvider) {
       templateUrl: 'partials/reviewOrder',
       controller: 'ReviewOrderCtrl'
     }).
+    when('/confirmOrder', {
+      templateUrl: 'partials/confirmOrder',
+      controller: 'ConfirmOrderCtrl'
+    }).
     otherwise({
       redirectTo: '/home'
     });

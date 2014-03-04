@@ -17,13 +17,10 @@
 				<div class="menu" ng-click="openMenu('navList')">
 					<span class="icon-list"></span>
 				</div>
-				<div>{{pageName}}</div>
-				<div>
-					<div class="order" ng-click="openMenu('orderList')"><span class="icon-text2"></span></div>
-					<div class="help">
-						<span class="icon-info"></span>
-					</div>
+				<div class="help">
+					<span class="icon-info small"></span>
 				</div>
+				<div class="order" ng-click="openMenu('orderList')"><span class="icon-text2"></span></div>
 	 		</div>
 		    
 			<div class="app-content" ng-view></div>
@@ -31,14 +28,14 @@
 
 		<div class="orderList slideMenu">
 			<ul>
-				<li><h2>Your Order</h2></li>
-			    <li ng-repeat='item in orderItems'>
-	       			{{item.name}} {{item.cost}} {{item.quantity}}
+				<li class="heading"><h2>Your Order</h2></li>
+			    <li class="order-list-items" ng-repeat='item in orderItems'>
+	       			{{item.quantity}} <span class="grey-color">|</span> {{item.name}} - &#36;{{item.cost}} 
 	       		</li>
-	       		<li>
+	       		<li class="orderTools" ng-show="orderToolsShown()">
 	       			<button class="text" ng-click="resetOrder()">reset</button>
 					<div class="total">Total: <span ng-bind="order.total"></span></div>
-					<a href="reviewOrder">Place Your Order</a>
+					<a href="reviewOrder" ng-click="placeOrder()" class="btn">Place Your Order</a>
 	       		</li>
 			</ul>
 	    </div>
