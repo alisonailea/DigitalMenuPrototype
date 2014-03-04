@@ -161,6 +161,19 @@ angular.module('myApp.controllers', []).
       document.addEventListener('mouseup', checkClick, false);
     };
 
+    $scope.waiterCalled = function(value){
+      if(!value){
+        return false;
+      } else {  
+        return true;
+      }
+    };
+
+    $scope.callWaiter = function(boolean, string){
+      $scope.waiterCalled(boolean);
+      return string;
+    };
+
   }).
   /* Logic specific to the Home page. */
   controller('HomeCtrl', function ($scope) {

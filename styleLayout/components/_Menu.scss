@@ -5,6 +5,10 @@
     @include justify-content(space-between);
     padding: 0;
     
+    .btn{
+		background-color: $background-dark;
+	}
+
     li{
     	@include flex(1);
     	@include display(flex); 

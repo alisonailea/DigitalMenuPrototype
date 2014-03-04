@@ -96,7 +96,7 @@ body {
   width: 100%; }
 
 h1 {
-  line-height: 32px;
+  line-height: 2.57rem;
   text-align: center; }
 
 h2 {
@@ -104,7 +104,7 @@ h2 {
   font-size: 2.286rem;
   font-weight: lighter;
   text-transform: uppercase;
-  margin-bottom: 15px;
+  margin-bottom: 1.071rem;
   line-height: 2.286rem;
   text-align: center; }
 
@@ -184,7 +184,7 @@ h2 {
   font-size: 2.286rem;
   font-weight: lighter;
   text-transform: uppercase;
-  margin-bottom: 15px; }
+  margin-bottom: 1.071rem; }
 
 /* Color Rules */
 body {
@@ -192,25 +192,7 @@ body {
   font-family: "OpenSansRegular", OpenSansRegular, "Helvetica Neue", Helvetica, Arial, sans-serif; }
 
 .grey-color {
-  color: #999; }
-
-.header {
-  font-size: 24px;
-  background-color: #666666; }
-  .header > div {
-    color: white;
-    text-align: center;
-    font-size: 16px; }
-    .header > div span {
-      font-size: 24px;
-      vertical-align: text-top; }
-  .header > div:first-child {
-    text-align: left; }
-  .header > div:last-child {
-    text-align: right;
-    font-size: 18px; }
-  .header ul {
-    background: rgba(51, 51, 51, 0.7); }
+  color: #999999; }
 
 ul li {
   list-style: none; }
@@ -220,7 +202,7 @@ ul li {
 .btn {
   color: white;
   background-color: #666666;
-  font-size: 1.29rem;
+  font-size: 1.286rem;
   text-decoration: none; }
   .btn:link, .btn:hover, .btn:active, .btn:visited {
     color: white;
@@ -228,10 +210,7 @@ ul li {
     text-decoration: none; }
 
 .btn-large {
-  font-size: 1.5rem; }
-
-.menuList .btn {
-  background-color: #333333; }
+  font-size: 1.714rem; }
 
 /* Font Icons */
 [class^="icon-"], [class*=" icon-"] {
@@ -681,7 +660,9 @@ ul li {
   -ms-flex-pack: justify;
   height: 8%;
   width: 100%;
-  position: absolute; }
+  position: absolute;
+  font-size: 24px;
+  background-color: #666666; }
   .header > div {
     -webkit-box-flex: 1;
     -moz-box-flex: 1;
@@ -692,50 +673,20 @@ ul li {
     flex: 1;
     position: relative;
     height: 100%;
-    padding: 5%; }
+    padding: 5%;
+    color: white;
+    text-align: center;
+    font-size: 16px; }
+    .header > div span {
+      font-size: 24px;
+      vertical-align: text-top; }
+    .header > div:first-child {
+      text-align: left; }
     .header > div:last-child {
-      display: -webkit-box;
-      display: -moz-box;
-      display: box;
-      display: -webkit-flex;
-      display: -moz-flex;
-      display: -ms-flexbox;
-      display: flex;
-      -webkit-box-orient: horizontal;
-      -moz-box-orient: horizontal;
-      box-orient: horizontal;
-      -webkit-flex-direction: row;
-      -moz-flex-direction: row;
-      flex-direction: row;
-      -ms-flex-direction: row;
-      -webkit-box-align: center;
-      -moz-box-align: center;
-      box-align: center;
-      -webkit-align-items: center;
-      -moz-align-items: center;
-      -ms-align-items: center;
-      -o-align-items: center;
-      align-items: center;
-      -ms-flex-align: center;
-      -webkit-box-pack: end;
-      -moz-box-pack: end;
-      box-pack: end;
-      -webkit-justify-content: flex-end;
-      -moz-justify-content: flex-end;
-      -ms-justify-content: flex-end;
-      -o-justify-content: flex-end;
-      justify-content: flex-end;
-      -ms-flex-pack: end; }
+      text-align: right;
+      font-size: 18px; }
       .header > div:last-child span.small {
         font-size: 16px; }
-      .header > div:last-child div {
-        -webkit-box-flex: 1;
-        -moz-box-flex: 1;
-        box-flex: 1;
-        -webkit-flex: 1;
-        -moz-flex: 1;
-        -ms-flex: 1;
-        flex: 1; }
 
 .menulist {
   display: -webkit-box;
@@ -771,6 +722,8 @@ ul li {
   justify-content: space-between;
   -ms-flex-pack: justify;
   padding: 0; }
+  .menulist .btn {
+    background-color: #333333; }
   .menulist li {
     -webkit-box-flex: 1;
     -moz-box-flex: 1;

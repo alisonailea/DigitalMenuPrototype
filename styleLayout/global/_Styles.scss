@@ -1,17 +1,18 @@
 // /* Global Application style rules */
 
 /* Font Rules */
-html { font-size: 87.5%;  } 
-body { font-size: 14px; font-size: 1rem; line-height: 1;} /* =14px */
+html { font-size: $default-font-size-percentage;  } 
+body { font-size: $default-font-size-px; font-size: $default-font-size; line-height: $default-line-height;} /* =14px */
+
 h1{ 
-	font-size: 2.57rem; ///* =36px */
+	font-size: $h1-font-size;
 	font-weight: lighter;
 }
 h2 {
-    font-size: 2.286rem;
+    font-size: $h2-font-size;
     font-weight: lighter;
 	text-transform: uppercase;
-    margin-bottom: 15px;
+    margin-bottom: $base-body-padding;
 }
 
 /* Color Rules */
@@ -21,35 +22,7 @@ body {
 }
 
 .grey-color{
-    color: #999;
-}
-
-.header {
-	font-size: 24px;
-    background-color: $background-medium;
-    
-	& > div{
-		
-		color: $font-color-lt;
-		text-align: center;
-        font-size: 16px;
-        
-        span{
-            font-size: 24px;
-            vertical-align: text-top;
-        }
-    }
-    
-    & > div:first-child{
-       text-align: left;
-    }
-    & > div:last-child{
-       text-align: right;
-       font-size: 18px;
-    }
-    ul{
-        background: rgba($background-dark, .7);
-    }
+    color: $font-color-grey;
 }
 
 ul li {
@@ -60,11 +33,11 @@ ul li {
     }
 }
 
-//* make all a-links look like buttons
+//* buttons
 .btn {
     color: $font-color-lt;
     background-color: $background-medium;
-    font-size: 1.29rem;
+    font-size: $large-body-font-size;
     text-decoration: none;
     
     &:link, &:hover, &:active, &:visited{
@@ -75,11 +48,5 @@ ul li {
 }
 
 .btn-large{
-	font-size: 1.5rem;
-}
-
-.menuList{
-	.btn{
-		background-color: $background-dark;
-	}
+	font-size: $extra-large-font-size;
 }

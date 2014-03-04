@@ -6,6 +6,7 @@ $background-medium: #666;
 $background-dark: #333;
 
 $font-color-lt: #fff;
+$font-color-grey: #999;
 
 //HEIGHT
 
@@ -17,3 +18,19 @@ $menu-topp-padding: $header-height + $header-comp-padding + 1;
 // Convenience Variables (Global) with fallbacks (in case the font doesn't deliver)
 $sans-serif: 'OpenSansRegular', OpenSansRegular, 'Helvetica Neue', Helvetica, Arial, sans-serif !default;
 $icon-font: 'fontello' !default;
+
+//Fonts
+///* This sets the defualt font size to =14px application wide */
+$default-font-size-percentage: 87.5%;
+$default-font-size-px: 14px;
+$default-font-size: 1rem;
+
+$h1-font-size: 2.57rem; ///* =36px */
+$h2-font-size: 2.286rem;
+
+$large-body-font-size: 1.286rem; // =18px //
+$extra-large-font-size: 1.714rem; // =24px //
+//Line Height
+$default-line-height: 1;
+
+$base-body-padding: 1.071rem;
