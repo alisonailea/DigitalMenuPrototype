@@ -17,7 +17,7 @@
 				<div class="menu" ng-click="openMenu('navList')">
 					<span class="icon-list"></span>
 				</div>
-				<div class="help" ng-class="callWaiter()" ng-click="openMenu('infoList')">
+				<div class="help icon {{callWaiterClass}}" ng-click="openMenu('infoList')">
 					<span class="icon-info small"></span>
 				</div>
 				<div class="order" ng-click="openMenu('orderList')"><span class="icon-text2"></span></div>
@@ -44,8 +44,8 @@
 				<li><a href="/about">About Us</a></li>
 			    <li><a href="/aboutApp">About the App</a></li>
 	       		<li>
-	       			<a  ng-click="callWaiter(true, 'call')">Call your Waiter</a>
-	       			<a  ng-click="callWaiter(false, 'cancelCall')">Cancel Call to your Waiter</a>
+	       			<a ng-hide="waiterCalled()" ng-click="callWaiter(true, 'call')">Call your Waiter</a>
+	       			<a ng-show="waiterCalled()" ng-click="callWaiter(false, 'noCall')">Cancel Call to your Waiter</a>
 	       		</li>
 			</ul>
 	    </div>

@@ -1,14 +1,20 @@
 // /* Global Application Font Icon rules*/
-[class^="icon-"], [class*=" icon-"] {
-  font-family: 'icomoon';
+[class^="icon-"], [class*=" icon-"], .icon:before, .icon:after {
+  font-family: $icon-font;
   speak: none;
+  /* Enable Ligatures */
+  -webkit-font-feature-settings:"liga","dlig";
+  -moz-font-feature-settings:"liga=1, dlig=1";
+  -moz-font-feature-settings:"liga","dlig";
+  -ms-font-feature-settings:"liga","dlig";
+  -o-font-feature-settings:"liga","dlig";
+  font-feature-settings:"liga","dlig";
+  text-rendering:optimizeLegibility;
   font-style: normal;
   font-weight: normal;
   font-variant: normal;
   text-transform: none;
   line-height: 1;
-
-  /* Better Font Rendering =========== */
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }

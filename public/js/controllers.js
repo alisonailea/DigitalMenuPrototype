@@ -48,6 +48,8 @@ angular.module('myApp.controllers', []).
     $scope.order = {total: '0.00', items: $scope.orderItems};
     $scope.pageName = 'Home';
     $scope.isHome = true;
+    $scope.waitStaffCall = false;
+    $scope.callWaiterClass = '';
 
     /* Global Application Functions */
     /* NOTE: With Angular all variables that you want to reference 
@@ -161,17 +163,29 @@ angular.module('myApp.controllers', []).
       document.addEventListener('mouseup', checkClick, false);
     };
 
-    $scope.waiterCalled = function(value){
-      if(!value){
-        return false;
-      } else {  
+    $scope.waiterCalled = function(){
+      if($scope.waitStaffCall){
         return true;
+      } else {
+        return false;
       }
     };
 
+    // $scope.waiterCalled = function(value){
+    //   if(!value){
+    //     return false;
+    //   } else {  
+    //     return true;
+    //   }
+    // };
+
     $scope.callWaiter = function(boolean, string){
-      $scope.waiterCalled(boolean);
-      return string;
+      if(typeof boolean === "boolean"){
+        $scope.waitStaffCall = boolean;
+      }
+      if(typeof string === "string"){
+        $scope.callWaiterClass = string;
+      }
     };
 
   }).
