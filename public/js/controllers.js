@@ -198,6 +198,14 @@ angular.module('myApp.controllers', []).
   controller('AboutCtrl', function ($scope) {
     $scope.updatePage('About Us');
   }).
+  /* Logic specific to the Special page. */
+  controller('SpecialCtrl', function ($scope) {
+    /* Data - this should be eventually pulled out to it's own JSON file 
+       and called through an Angular service */
+    $scope.menuList = $scope.menu.specials;
+
+    $scope.updatePage('Appetizers');
+  }).
   /* Logic specific to the Appetizer page. */
   controller('AppetizerCtrl', function ($scope) {
     /* Data - this should be eventually pulled out to it's own JSON file 

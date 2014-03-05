@@ -11,6 +11,7 @@ exports.name = function (req, res) {
 exports.navigation = function (req, res) {
 	res.json({
 		navigation: [
+			{'name': 'Specials', 'location': 'special'},
 			{'name': 'Appetizers', 'location': 'appetizer'},
 			{'name': 'Entrees', 'location': 'entrees'},
 			{'name': 'Dessert', 'location': 'desserts'},
@@ -22,6 +23,26 @@ exports.navigation = function (req, res) {
 exports.menu = function (req, res) {
 	res.json(
 		{ 'menu': {
+			'specials': [
+				{
+					'name': 'Hummus',
+					'imgUrl': 'img/appetizer/Mushrooms.jpg',
+					'description': 'Nunc pretium lectus augue, eget tincidunt arcu suscipit et. Donec vitae nisl in ante condimentum sollicitudin vel id elit.',
+					'cost': '6.00'
+				},
+				{
+					'name': 'Special2',
+					'imgUrl': 'img/appetizer/GarlicBread.jpg',
+					'description': 'Nunc pretium lectus augue, eget tincidunt arcu suscipit et. Donec vitae nisl in ante condimentum sollicitudin vel id elit.',
+					'cost': '5.50'
+				},
+				{
+					'name': 'Special3',
+					'imgUrl': 'img/appetizer/Antipasto.jpg',
+					'description': 'Nunc pretium lectus augue, eget tincidunt arcu suscipit et. Donec vitae nisl in ante condimentum sollicitudin vel id elit.',
+					'cost': '5.00'
+				}
+			],
 			'appetizers': [
 				{
 					'name': 'Stuffed Mushrooms',
