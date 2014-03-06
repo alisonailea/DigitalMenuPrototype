@@ -98,7 +98,7 @@ exports.menu = function (req, res) {
 				},
 				{
 					'name': 'Lemon Cream Cake',
-					'imgUrl': 'img/dessert/LemonCake.png',
+					'imgUrl': 'img/dessert/LemonCake.jpg',
 					'description': 'Delicate white cake and lemon cream filling with a vanilla crumb topping.',
 					'cost': '7.29'
 				}
@@ -112,7 +112,7 @@ exports.menu = function (req, res) {
 				},
 				{
 					'name': 'Classic Bellini',
-					'imgUrl': 'img/drink/Bellini.jpg',
+					'imgUrl': 'img/drink/Bellini.png',
 					'description': 'White Peach, Prosecco.',
 					'cost': '11.00'
 				},
