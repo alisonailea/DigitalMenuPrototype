@@ -11,6 +11,7 @@ exports.name = function (req, res) {
 exports.navigation = function (req, res) {
 	res.json({
 		navigation: [
+			{'name': 'Specials', 'location': 'special'},
 			{'name': 'Appetizers', 'location': 'appetizer'},
 			{'name': 'Entrees', 'location': 'entrees'},
 			{'name': 'Dessert', 'location': 'desserts'},
@@ -22,6 +23,26 @@ exports.navigation = function (req, res) {
 exports.menu = function (req, res) {
 	res.json(
 		{ 'menu': {
+			'specials': [
+				{
+					'name': 'Hummus',
+					'imgUrl': 'img/appetizer/Mushrooms.jpg',
+					'description': 'Nunc pretium lectus augue, eget tincidunt arcu suscipit et. Donec vitae nisl in ante condimentum sollicitudin vel id elit.',
+					'cost': '6.00'
+				},
+				{
+					'name': 'Special2',
+					'imgUrl': 'img/appetizer/GarlicBread.jpg',
+					'description': 'Nunc pretium lectus augue, eget tincidunt arcu suscipit et. Donec vitae nisl in ante condimentum sollicitudin vel id elit.',
+					'cost': '5.50'
+				},
+				{
+					'name': 'Special3',
+					'imgUrl': 'img/appetizer/Antipasto.jpg',
+					'description': 'Nunc pretium lectus augue, eget tincidunt arcu suscipit et. Donec vitae nisl in ante condimentum sollicitudin vel id elit.',
+					'cost': '5.00'
+				}
+			],
 			'appetizers': [
 				{
 					'name': 'Stuffed Mushrooms',
@@ -77,7 +98,7 @@ exports.menu = function (req, res) {
 				},
 				{
 					'name': 'Lemon Cream Cake',
-					'imgUrl': 'img/dessert/LemonCake.png',
+					'imgUrl': 'img/dessert/LemonCake.jpg',
 					'description': 'Delicate white cake and lemon cream filling with a vanilla crumb topping.',
 					'cost': '7.29'
 				}
@@ -91,7 +112,7 @@ exports.menu = function (req, res) {
 				},
 				{
 					'name': 'Classic Bellini',
-					'imgUrl': 'img/drink/Bellini.jpg',
+					'imgUrl': 'img/drink/Bellini.png',
 					'description': 'White Peach, Prosecco.',
 					'cost': '11.00'
 				},
