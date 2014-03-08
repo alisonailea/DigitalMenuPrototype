@@ -15,6 +15,10 @@ config(function ($routeProvider, $locationProvider) {
         controller: (controller name. Should match a controller in the js/controllers.js file)
   */
   $routeProvider.
+    when('/', {
+      templateUrl: 'partials/home',
+      controller: 'HomeCtrl'
+    }).
     when('/home', {
       templateUrl: 'partials/home',
       controller: 'HomeCtrl'

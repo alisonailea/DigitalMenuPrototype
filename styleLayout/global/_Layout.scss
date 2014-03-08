@@ -32,6 +32,12 @@ body {
     height: 100%;
     width: 100% /* needed for Firefox */
 }
+
+.btn{
+    @media screen and (min-width: 400px){
+        background-color: blue;
+    }
+}
 h1{
     line-height: $h1-font-size;
     text-align: center;

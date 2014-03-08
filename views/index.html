@@ -14,13 +14,15 @@
 	<body ng-controller="AppCtrl" ng-init="callWaiter(false, 'cancelCall')">
 		<div class="app">
 			<div class="header">
-				<div class="menu" ng-click="openMenu('navList')">
-					<span class="icon-list"></span>
+				<div class="menu" ng-click="openMenu('navList')" ng-hide="orderPlaced()">
+					<span class="icon-list"></span>Menu
 				</div>
 				<div class="help icon {{callWaiterClass}}" ng-click="openMenu('infoList')">
 					<span class="icon-info small"></span>
 				</div>
-				<div class="order" ng-click="openMenu('orderList')"><span class="icon-text2"></span></div>
+				<div class="order" ng-click="openMenu('orderList')" ng-hide="orderPlaced()">
+					<span class="icon-text2"></span>Your Order
+				</div>
 	 		</div>
 		    
 			<div class="app-content" ng-view></div>
@@ -28,15 +30,20 @@
 
 		<div class="orderList slideMenu">
 			<ul>
+				<li>close</li>
 				<li class="heading"><h2>Your Order</h2></li>
 			    <li class="order-list-items" ng-repeat='item in orderItems'>
 	       			{{item.quantity}} <span class="grey-color">|</span> {{item.name}} - &#36;{{item.cost}} 
 	       		</li>
+	       		<li class="order-list-items" ng-hide="orderToolsShown()">
+	       			You haven't added anything new to your order yet. Click the button in the top left corner <span class="icon-list"></span> and select items from our menu.
+				</li>
 	       		<li class="orderTools" ng-show="orderToolsShown()">
-	       			<button class="text" ng-click="resetOrder()">reset</button>
+	       			<button class="text" ng-click="resetOrder()">Cancel my Order</button>
 					<div class="total">Total: <span ng-bind="order.total"></span></div>
 					<a href="reviewOrder" ng-click="placeOrder()" class="btn">Place Your Order</a>
 	       		</li>
+
 			</ul>
 	    </div>
 	    <div class="infoList slideMenu">
@@ -47,6 +54,7 @@
 	       			<a ng-hide="waiterCalled()" ng-click="callWaiter(true, 'call')">Call your Waiter</a>
 	       			<a ng-show="waiterCalled()" ng-click="callWaiter(false, 'noCall')">Cancel Call to your Waiter</a>
 	       		</li>
+	       		<li>close</li>
 			</ul>
 	    </div>
 	    <div class="navList slideMenu">
@@ -56,6 +64,7 @@
  					<a href="{{link.location}}">{{link.name}}</a>
  				</li>
 				<li><a href="reviewOrder">Place Your Order</a></li>
+				<li>close</li>
 	       </ul>
 	    </div>
 

@@ -36,16 +36,32 @@ app.get('/api/navigation', api.navigation);
 app.get('/api/menu', api.menu);
 
 app.post('/json/output/output.json', function(req, res) {
-	var fileLoc = 'json/output/';
-	var fileName = 'output.json';
+    var date = new Date();
+    var year = date.getFullYear().toString();
+    var month = date.getMonth().toString();
+    var day = date.getDay().toString();
+    var hour = date.getHours().toString();
+    var min = date.getMinutes().toString();
+    var sec = date.getSeconds().toString();
+    var milisec = date.getMilliseconds().toString();
+    var setDate = year+month+day+hour+min+sec+milisec;
+
+	var fileLoc = 'JSON/output/';
+	var fileName = 'output';
+    var format = '.json';
+
+    var fullFileName = fileName+'-'+setDate+format;
 	var data = JSON.stringify(req.body, null, 4);
-    fs.writeFile(fileLoc+fileName, data, function (err) {
+    
+    fs.writeFile(fileLoc+fullFileName, data, function (err) {
 		if (err) throw err;
 		res.end();
 	});
 	// console.log(res);
 
 });
+
+console.log(app.get('table'));
 
 // redirect all others to the index (HTML5 history)
 app.get('*', routes.index);

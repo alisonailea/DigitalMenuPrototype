@@ -3,7 +3,7 @@
 /* Controllers */
 angular.module('myApp.controllers', []).
   /* Global Logic for the Application */
-  controller('AppCtrl', function ($scope, $http) {
+  controller('AppCtrl', function ($scope, $http, $location) {
     /* Service to get Data from the back end server.
        This is currently a placeholder */
     $http({
@@ -40,12 +40,21 @@ angular.module('myApp.controllers', []).
       $scope.menu = 'Error!';
     });
 
+    var tableTest = /table=/;
+    var table = window.location.search.substring(1);
+    var isTable = tableTest.test(table);
+    if (isTable){
+      table=table.replace('table=', '');
+    }
+    
+
     /* Global Application Variables*/
     /* NOTE: With Angular all variables that you want to reference 
        in the HTML Model they have to start with $scope.
        Read more about Angular $scope at http://angularjs.org/ */
     $scope.orderItems = [];
-    $scope.order = {total: '0.00', items: $scope.orderItems};
+    $scope.order = {'table number': table, total: '0.00', items: $scope.orderItems};
+    $scope.reviewOrder = [];
     $scope.pageName = 'Home';
     $scope.isHome = true;
     $scope.waitStaffCall = false;
@@ -82,6 +91,14 @@ angular.module('myApp.controllers', []).
 
     $scope.orderToolsShown = function(){
       if($scope.orderItems.length > 0){
+        return true;
+      } else {
+        return false;
+      }
+    };
+
+    $scope.orderPlaced = function(){
+      if($scope.reviewOrder.length > 0){
         return true;
       } else {
         return false;
@@ -171,14 +188,6 @@ angular.module('myApp.controllers', []).
       }
     };
 
-    // $scope.waiterCalled = function(value){
-    //   if(!value){
-    //     return false;
-    //   } else {  
-    //     return true;
-    //   }
-    // };
-
     $scope.callWaiter = function(boolean, string){
       if(typeof boolean === "boolean"){
         $scope.waitStaffCall = boolean;
@@ -241,9 +250,9 @@ angular.module('myApp.controllers', []).
       /* Use Factory method services.js to make RESTful call to the server */
       var orderData = $scope.order;
       PostService.save(orderData, function(data) {
-          console.log(data);
           $location.path('/confirmOrder');
-  });
+          $scope.reviewOrder.push(orderData);
+      });
     };
   }).
   /* Logic specific to the Confirm your Order page. */
