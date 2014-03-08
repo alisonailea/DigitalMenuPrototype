@@ -11,7 +11,6 @@ exports.name = function (req, res) {
 exports.navigation = function (req, res) {
 	res.json({
 		navigation: [
-			{'name': 'Specials', 'location': 'special'},
 			{'name': 'Appetizers', 'location': 'appetizer'},
 			{'name': 'Entrees', 'location': 'entrees'},
 			{'name': 'Dessert', 'location': 'desserts'},

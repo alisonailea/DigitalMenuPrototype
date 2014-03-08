@@ -31,7 +31,7 @@ config(function ($routeProvider, $locationProvider) {
       templateUrl: 'partials/aboutApp',
       controller: 'AboutCtrl'
     }).
-    when('/special', {
+    when('/specials', {
       templateUrl: 'partials/menuItems',
       controller: 'SpecialCtrl'
     }).

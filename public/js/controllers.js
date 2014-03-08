@@ -213,7 +213,7 @@ angular.module('myApp.controllers', []).
        and called through an Angular service */
     $scope.menuList = $scope.menu.specials;
 
-    $scope.updatePage('Appetizers');
+    $scope.updatePage('Specials');
   }).
   /* Logic specific to the Appetizer page. */
   controller('AppetizerCtrl', function ($scope) {
