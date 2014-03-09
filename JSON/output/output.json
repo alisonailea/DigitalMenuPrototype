@@ -1,19 +1,14 @@
 {
-    "total": "16.50",
+    "total": "11.50",
     "items": [
         {
-            "name": "Stuffed Mushrooms",
+            "name": "Hummus",
             "cost": "6.00",
             "quantity": 1
         },
         {
-            "name": "Garlic Bread",
+            "name": "Special2",
             "cost": "5.50",
-            "quantity": 1
-        },
-        {
-            "name": "Antipasto",
-            "cost": "5.00",
             "quantity": 1
         }
     ]

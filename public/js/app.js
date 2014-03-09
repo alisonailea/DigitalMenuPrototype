@@ -25,7 +25,7 @@ config(function ($routeProvider, $locationProvider) {
     }).
     when('/aboutApp', {
       templateUrl: 'partials/aboutApp',
-      controller: 'AboutCtrl'
+      controller: 'HelpCtrl'
     }).
     when('/special', {
       templateUrl: 'partials/menuItems',
