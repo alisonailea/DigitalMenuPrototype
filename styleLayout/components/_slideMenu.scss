@@ -59,15 +59,15 @@
     position: absolute;
     top: 0px;
     display: none;
-    top: 8%;
-    padding: 10px;
+    top: 4%;
+    padding: 35px;
     ul {
         position: relative;
         background: #666;
         padding: 10px;
         &:after {
             bottom: 100%;
-            left: 50%;
+            left: 0%;
             border: solid transparent;
             content: " ";
             height: 0;
@@ -80,8 +80,23 @@
             margin-left: -26px;
         }
         li{
-            margin: 5px;
-            padding: 10px;
+            margin: 0px;
+            padding: 5px;
+	    height: 100%;
+        }
+    }
+    a {
+        padding: 10px;
+        font-size: 18px;
+        cursor: pointer;
+        color: #c2c2c2;
+        text-decoration: none;
+        width: 100%;
+        min-width: 100px;
+        display: block;
+        
+        &:hover, &:active, &.nav-list-hover {
+            background-color: darken($background-medium, 6%);
         }
     }
     &.show{
