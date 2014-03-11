@@ -61,7 +61,6 @@ app.post('/json/output/output.json', function(req, res) {
 
 });
 
-console.log(app.get('table'));
 
 // redirect all others to the index (HTML5 history)
 app.get('*', routes.index);

@@ -17,15 +17,24 @@
 				<div class="menu" ng-click="openMenu('navList')" ng-hide="orderPlaced()">
 					<span class="icon-list"></span>Menu
 				</div>
-				<div class="help icon {{callWaiterClass}}" ng-click="openMenu('infoList')">
-					<span class="icon-info small"></span>
-				</div>
+				<div class="pageName">{{pageName}}</div>
+				
 				<div class="order" ng-click="openMenu('orderList')" ng-hide="orderPlaced()">
-					<span class="icon-text2"></span>Your Order
+					Your Order <span class="icon-arrow-rightThree"></span>
 				</div>
 	 		</div>
-		    
-			<div class="app-content" ng-view></div>
+		    <div class="appContainer">
+				<div class="app-content" ng-view></div>
+			</div>
+			<div class="footer">
+				<div>
+					<a href="/about"><span class="icon-info"></span><br>About</a>
+				</div>
+				<div>
+					<a ng-hide="waiterCalled()" ng-click="callWaiter(true, 'call')"><span class="icon-user"></span><br>Call your Host</a>
+	       			<a ng-show="waiterCalled()" ng-click="callWaiter(false, 'noCall')"><span class="icon-users"></span><br>Cancel Call to your Host</a>
+				</div>
+			</div>
 		</div>
 
 		<div class="orderList slideMenu">
@@ -71,7 +80,9 @@
 
 	    <!-- Scripts -->
 		<script type="text/javascript" src="js/lib/angular/angular.js"></script>
+		<script type="text/javascript" src="js/lib/angular/angular-route.js"></script>
 		<script type="text/javascript" src="js/lib/angular/angular-resource.js"></script>
+		<script type="text/javascript" src="js/lib/angular/angular-animate.js"></script>
 		<script type="text/javascript" src="js/lib/angular/angular-touch.js"></script>
         <script type="text/javascript" src="js/app.js"></script>
         <script type="text/javascript" src="js/services.js"></script>

@@ -8,10 +8,13 @@
 			<div class="title">{{item.name}}</div>
 			<div class="description">{{item.description}}</div>
 			<div class="meta-data">
-				<div class="quantity" ng-bind="getQuantity(item.name)"></div>
+				<div class="quantity" ng-bind="getQuantity(item.id)">{{item.quantity}}</div>
 				<div class="cost">{{item.cost}}</div>
 			</div>
-			<button class="order" ng-click="addToOrder(item.name, item.cost, 1)">Add to Order</button>
+			<div class="add-remove">
+				<button class="order" ng-click="addToOrder(item.id, item.name, item.cost)"><span class="icon-add-to-list"></span>add</button>
+				<button class="removeQuantity" ng-click="removeFromOrder(item.id)" ng-show="getQuantity(item.id)">remove</button>
+			</div>
 		</div>
 	</li>
 </ul>

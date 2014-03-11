@@ -56,7 +56,8 @@ html, body, div {
   width: 100%; }
 
 html {
-  height: 100%; }
+  height: 100%;
+  overflow: hidden; }
 
 body {
   display: -webkit-box;
@@ -91,6 +92,8 @@ body {
   -o-justify-content: center;
   justify-content: center;
   -ms-flex-pack: center;
+  position: relative;
+  overflow: hidden;
   margin: 0;
   height: 100%;
   width: 100%; }
@@ -141,18 +144,70 @@ button.text {
   -moz-order: 2;
   order: 2;
   -ms-flex-order: 2;
+  position: relative;
   margin: 0;
   padding: 0;
   height: 100%;
   width: 100%;
   /* needed for Firefox */ }
 
-.app-content {
-  width: 100%;
+.footer {
   position: absolute;
-  top: 8%;
-  padding: 10px;
-  line-height: 18px; }
+  bottom: 0;
+  width: 100%;
+  min-width: 320px;
+  background-color: #f2f2f2;
+  border-top: 1px solid #999999;
+  font-size: 0.7857rem;
+  display: -webkit-box;
+  display: -moz-box;
+  display: box;
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -moz-box-orient: horizontal;
+  box-orient: horizontal;
+  -webkit-flex-direction: row;
+  -moz-flex-direction: row;
+  flex-direction: row;
+  -ms-flex-direction: row;
+  -webkit-box-align: center;
+  -moz-box-align: center;
+  box-align: center;
+  -webkit-align-items: center;
+  -moz-align-items: center;
+  -ms-align-items: center;
+  -o-align-items: center;
+  align-items: center;
+  -ms-flex-align: center;
+  -webkit-box-pack: justify;
+  -moz-box-pack: justify;
+  box-pack: justify;
+  -webkit-justify-content: space-between;
+  -moz-justify-content: space-between;
+  -ms-justify-content: space-between;
+  -o-justify-content: space-between;
+  justify-content: space-between;
+  -ms-flex-pack: justify; }
+  .footer div {
+    -webkit-box-flex: 1;
+    -moz-box-flex: 1;
+    box-flex: 1;
+    -webkit-flex: 1;
+    -moz-flex: 1;
+    -ms-flex: 1;
+    flex: 1;
+    text-align: center;
+    padding: 5px 10px; }
+    .footer div:first-child {
+      border-right: 1px solid #cccccc; }
+  .footer a {
+    color: #666666;
+    text-decoration: none; }
+  .footer span {
+    font-size: 1rem; }
 
 .btn {
   width: 85%;
@@ -236,17 +291,17 @@ ul li {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale; }
 
-.icon-phone:before {
-  content: "\e600"; }
-
 .icon-mobile:before {
   content: "\e601"; }
 
+.icon-email:before {
+  content: "\e603"; }
+
+.icon-phone:before {
+  content: "\e600"; }
+
 .icon-mouse:before {
   content: "\e602"; }
-
-.icon-mail:before {
-  content: "\e603"; }
 
 .icon-pencil:before {
   content: "\e604"; }
@@ -296,13 +351,13 @@ ul li {
 .icon-star:before {
   content: "\e613"; }
 
-.icon-star2:before {
+.icon-starTwo:before {
   content: "\e614"; }
 
 .icon-heart:before {
   content: "\e615"; }
 
-.icon-heart2:before {
+.icon-heartTwo:before {
   content: "\e616"; }
 
 .icon-location:before {
@@ -314,7 +369,7 @@ ul li {
 .icon-compass:before {
   content: "\e619"; }
 
-.icon-location2:before {
+.icon-locationTwo:before {
   content: "\e61a"; }
 
 .icon-search:before {
@@ -335,28 +390,28 @@ ul li {
 .icon-arrow-right:before {
   content: "\e620"; }
 
-.icon-arrow-left2:before {
+.icon-arrow-leftTwo:before {
   content: "\e621"; }
 
-.icon-arrow-down2:before {
+.icon-arrow-downTwo:before {
   content: "\e622"; }
 
-.icon-arrow-up2:before {
+.icon-arrow-upTwo:before {
   content: "\e623"; }
 
-.icon-arrow-right2:before {
+.icon-arrow-rightTwo:before {
   content: "\e624"; }
 
-.icon-arrow-left3:before {
+.icon-arrow-leftThree:before {
   content: "\e625"; }
 
-.icon-arrow-down3:before {
+.icon-arrow-downThree:before {
   content: "\e626"; }
 
-.icon-arrow-up3:before {
+.icon-arrow-upThree:before {
   content: "\e627"; }
 
-.icon-uniE628:before {
+.icon-arrow-rightThree:before {
   content: "\e628"; }
 
 .icon-menu:before {
@@ -389,7 +444,7 @@ ul li {
 .icon-docs:before {
   content: "\e632"; }
 
-.icon-text2:before {
+.icon-textTwo:before {
   content: "\e633"; }
 
 .icon-list:before {
@@ -401,7 +456,7 @@ ul li {
 .icon-add-to-list:before {
   content: "\e636"; }
 
-.icon-list2:before {
+.icon-listTwo:before {
   content: "\e637"; }
 
 .icon-minus:before {
@@ -413,7 +468,7 @@ ul li {
 .icon-info:before {
   content: "\e63a"; }
 
-.icon-info2:before {
+.icon-infoTwo:before {
   content: "\e63b"; }
 
 .icon-question:before {
@@ -431,7 +486,7 @@ ul li {
 .icon-checkmark:before {
   content: "\e640"; }
 
-.icon-uniE641:before {
+.icon-grid:before {
   content: "\e641"; }
 
 .icon-cart:before {
@@ -476,10 +531,10 @@ ul li {
 .icon-twitter:before {
   content: "\e64f"; }
 
-.icon-arrow-down4:before {
+.icon-arrow-downFour:before {
   content: "\e650"; }
 
-.icon-arrow-up4:before {
+.icon-arrow-upFour:before {
   content: "\e651"; }
 
 /* components */
@@ -609,7 +664,7 @@ ul li {
   top: 0;
   left: 0;
   margin: 0;
-  padding: 14% 0 0 0;
+  padding: 38px 0 0 0;
   height: 100%;
   overflow: hidden;
   width: 0%;
@@ -669,11 +724,13 @@ ul li {
   -o-justify-content: space-between;
   justify-content: space-between;
   -ms-flex-pack: justify;
-  height: 8%;
+  height: 38px;
+  min-width: 320px;
   width: 100%;
   position: absolute;
-  font-size: 24px;
-  background-color: #666666; }
+  background-color: #666666;
+  z-index: 100;
+  font-size: 1.071rem; }
   .header > div {
     -webkit-box-flex: 1;
     -moz-box-flex: 1;
@@ -684,20 +741,18 @@ ul li {
     flex: 1;
     position: relative;
     height: 100%;
-    padding: 5%;
+    padding: 10px 5px;
     color: white;
-    text-align: center;
-    font-size: 16px; }
+    text-align: center; }
     .header > div span {
-      font-size: 24px;
+      font-size: 1.143rem;
       vertical-align: text-top; }
     .header > div:first-child {
-      text-align: left; }
+      text-align: left;
+      font-size: 0.7857rem; }
     .header > div:last-child {
       text-align: right;
-      font-size: 18px; }
-      .header > div:last-child span.small {
-        font-size: 16px; }
+      font-size: 0.7857rem; }
   .header .help.call:after {
     content: 'phone';
     font-size: 24px;
@@ -908,12 +963,16 @@ ul li {
     .menulist .menu-list-container button {
       padding: 3px 5px;
       background-color: #f2f2f2;
-      border: 1px solid #c2c2c2;
+      border: 0;
       text-align: center;
-      margin-top: 10px; }
-      .menulist .menu-list-container button:hover, .menulist .menu-list-container button:active {
+      margin-top: 10px;
+      box-shadow: none; }
+      .menulist .menu-list-container button span {
+        font-size: 16px; }
+      .menulist .menu-list-container button:hover {
         background-color: #c2c2c2;
-        font-weight: normal; }
+        font-weight: normal;
+        border: 0; }
     .menulist .menu-list-container .title {
       line-height: 24px;
       font-size: 18px; }
@@ -945,3 +1004,34 @@ ul li {
       background: #f2f2f2;
       color: #333;
       border-color: #666; }
+
+.app-content {
+  position: absolute;
+  top: 38px;
+  width: 100%;
+  padding: 10px;
+  line-height: 18px;
+  height: 100%;
+  overflow-y: scroll;
+  min-width: 320px; }
+
+.app-content.ng-enter, .app-content.ng-leave {
+  -webkit-transition: all cubic-bezier(0.25, 0.46, 0.45, 0.94) 1.5s;
+  transition: all cubic-bezier(0.25, 0.46, 0.45, 0.94) 1.5s;
+  display: block;
+  width: 100%;
+  border-left: 1px solid black;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  padding: 10px; }
+.app-content.ng-enter {
+  left: 100%; }
+  .app-content.ng-enter.ng-enter-active {
+    left: 0; }
+.app-content.ng-leave.ng-leave-active {
+  left: -100%; }
+
+/*@ sourceMappingURL=app.css.map */

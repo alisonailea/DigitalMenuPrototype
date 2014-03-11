@@ -19,17 +19,17 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
-.icon-phone:before {
-  content: "\e600";
-}
 .icon-mobile:before {
   content: "\e601";
 }
+.icon-email:before {
+  content: "\e603";
+}
+.icon-phone:before {
+  content: "\e600";
+}
 .icon-mouse:before {
   content: "\e602";
-}
-.icon-mail:before {
-  content: "\e603";
 }
 .icon-pencil:before {
   content: "\e604";
@@ -79,13 +79,13 @@
 .icon-star:before {
   content: "\e613";
 }
-.icon-star2:before {
+.icon-starTwo:before {
   content: "\e614";
 }
 .icon-heart:before {
   content: "\e615";
 }
-.icon-heart2:before {
+.icon-heartTwo:before {
   content: "\e616";
 }
 .icon-location:before {
@@ -97,7 +97,7 @@
 .icon-compass:before {
   content: "\e619";
 }
-.icon-location2:before {
+.icon-locationTwo:before {
   content: "\e61a";
 }
 .icon-search:before {
@@ -118,28 +118,28 @@
 .icon-arrow-right:before {
   content: "\e620";
 }
-.icon-arrow-left2:before {
+.icon-arrow-leftTwo:before {
   content: "\e621";
 }
-.icon-arrow-down2:before {
+.icon-arrow-downTwo:before {
   content: "\e622";
 }
-.icon-arrow-up2:before {
+.icon-arrow-upTwo:before {
   content: "\e623";
 }
-.icon-arrow-right2:before {
+.icon-arrow-rightTwo:before {
   content: "\e624";
 }
-.icon-arrow-left3:before {
+.icon-arrow-leftThree:before {
   content: "\e625";
 }
-.icon-arrow-down3:before {
+.icon-arrow-downThree:before {
   content: "\e626";
 }
-.icon-arrow-up3:before {
+.icon-arrow-upThree:before {
   content: "\e627";
 }
-.icon-uniE628:before {
+.icon-arrow-rightThree:before {
   content: "\e628";
 }
 .icon-menu:before {
@@ -172,7 +172,7 @@
 .icon-docs:before {
   content: "\e632";
 }
-.icon-text2:before {
+.icon-textTwo:before {
   content: "\e633";
 }
 .icon-list:before {
@@ -184,7 +184,7 @@
 .icon-add-to-list:before {
   content: "\e636";
 }
-.icon-list2:before {
+.icon-listTwo:before {
   content: "\e637";
 }
 .icon-minus:before {
@@ -196,7 +196,7 @@
 .icon-info:before {
   content: "\e63a";
 }
-.icon-info2:before {
+.icon-infoTwo:before {
   content: "\e63b";
 }
 .icon-question:before {
@@ -214,7 +214,7 @@
 .icon-checkmark:before {
   content: "\e640";
 }
-.icon-uniE641:before {
+.icon-grid:before {
   content: "\e641";
 }
 .icon-cart:before {
@@ -259,9 +259,9 @@
 .icon-twitter:before {
   content: "\e64f";
 }
-.icon-arrow-down4:before {
+.icon-arrow-downFour:before {
   content: "\e650";
 }
-.icon-arrow-up4:before {
+.icon-arrow-upFour:before {
   content: "\e651";
 }

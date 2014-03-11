@@ -7,12 +7,13 @@ $background-dark: #333;
 
 $font-color-lt: #fff;
 $font-color-grey: #999;
+$font-color-medium: #666;
 
 //HEIGHT
 
-$header-height: 8%;
-$header-comp-padding: 5%;
-$menu-topp-padding: $header-height + $header-comp-padding + 1;
+$header-height: 38px;
+$header-comp-padding: 10px 5px;
+$menu-topp-padding: $header-height;
 
 
 // Convenience Variables (Global) with fallbacks (in case the font doesn't deliver)
@@ -28,6 +29,8 @@ $default-font-size: 1rem;
 $h1-font-size: 2.57rem; ///* =36px */
 $h2-font-size: 2.286rem;
 
+$small-font-size: 0.7857rem; //=11px;//
+$medium-font-size: 1.143rem; //=16px;//
 $large-body-font-size: 1.286rem; // =18px //
 $extra-large-font-size: 1.714rem; // =24px //
 //Line Height

@@ -22,12 +22,15 @@ html, body, div {
 }
 html {
   height: 100%;
+  overflow: hidden;
 }
 body {
     @include display(flex); 
     @include flex-direction(row);
     @include align-items(center);
     @include justify-content(center);
+    position: relative;
+    overflow: hidden;
     margin: 0;
     height: 100%;
     width: 100% /* needed for Firefox */
@@ -81,18 +84,42 @@ button.text{
 
 .app {
     @include order(2);
+    position: relative;
     margin: 0;
     padding: 0;
     height: 100%;
     width: 100%; /* needed for Firefox */
 }
 
-.app-content{
-    width: 100%; 
+.footer{
     position: absolute;
-    top: 8%;
-    padding: 10px;
-    line-height: 18px;
+    bottom: 0;
+    width: 100%; 
+    min-width: 320px;
+    background-color: $backgroundColor-main;
+    
+    border-top: 1px solid $font-color-grey;
+    font-size: $small-font-size;
+    @include display(flex); 
+    @include flex-direction(row);
+    @include align-items(center);
+    @include justify-content(space-between);
+    
+    div{
+        @include flex(1);
+        text-align: center;
+        padding: 5px 10px;
+        &:first-child{
+            border-right: 1px solid lighten($font-color-grey, 20%);
+        }
+    }
+    a {
+        color: $font-color-medium;
+        text-decoration: none;
+    }
+    span{
+        font-size: $default-font-size;
+    }
 }
 
 //* make all a-links look like buttons

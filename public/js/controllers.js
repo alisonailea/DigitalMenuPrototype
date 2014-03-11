@@ -1,7 +1,7 @@
 'use strict';
 
 /* Controllers */
-angular.module('myApp.controllers', []).
+angular.module('myApp.controllers', ['ngTouch']).
   /* Global Logic for the Application */
   controller('AppCtrl', function ($scope, $http, $location) {
     /* Service to get Data from the back end server.
@@ -113,43 +113,69 @@ angular.module('myApp.controllers', []).
       } else {
         return false;
       }
-    }
+    };
 
     $scope.updatePage = function(pageName){
       $scope.pageName = pageName;
     };
 
-    $scope.getQuantity = function(itemName){
+    $scope.getQuantity = function(id){
       var order = $scope.orderItems;
       var count = 0;
       
       for(var item in order){
         item = order[item];
-        if(item.name === itemName){
-          return 'Quantity: +' + item.quantity;
+        if(item.id === id){
+          if(item.quantity > 0){
+            return 'Quantity: +'+item.quantity;
+          } else {
+            return;
+          }
         }
       }
     };
 
-    $scope.addToOrder = function(name, cost, quantity) {
+    $scope.addToOrder = function(id, name, cost) {
       /* Add an item object to the $scope.orderItems array */
-
       var order = $scope.orderItems;
       var newItem = true;
 
       for(var item in order){
-        item = order[item];
-        if(item.name === name){
-          item.quantity += quantity;
+        var index = order[item];
+        var itemID = index.id;
+        
+        if(itemID === id){
+          index.quantity = index.quantity + 1;
           newItem = false;
+
         }
       }
  
       if (newItem){
-        var orderItem = {name: name, cost: cost, quantity: quantity};
+        var orderItem = {id: id, name: name, cost: cost, quantity: 1};
         order.push(orderItem);
       }
+      $scope.updateTotal();
+    };
 
+    $scope.removeFromOrder = function(id) {
+      /* remove an item object from the $scope.orderItems array */
+      var order = $scope.orderItems;
+      for(var item in order){
+        var index = order[item];
+        var itemID = index.id;
+
+        if(itemID === id){
+          var newQuantity = index.quantity - 1;
+          
+          if(newQuantity > 0){
+            index.quantity = index.quantity - 1;
+          } else {
+            order.splice(item, 1);
+          }
+          
+        }
+      }
       $scope.updateTotal();
     };
 
