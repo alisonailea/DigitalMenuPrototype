@@ -207,6 +207,10 @@ angular.module('myApp.controllers', []).
   controller('AboutCtrl', function ($scope) {
     $scope.updatePage('About Us');
   }).
+  /* Logic specific to the Help page. */
+  controller('HelpCtrl', function ($scope) {
+    $scope.updatePage('Help');
+  }).
   /* Logic specific to the Special page. */
   controller('SpecialCtrl', function ($scope) {
     /* Data - this should be eventually pulled out to it's own JSON file 
