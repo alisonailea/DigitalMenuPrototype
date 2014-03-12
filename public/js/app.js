@@ -35,7 +35,7 @@ config(function ($routeProvider, $locationProvider) {
     when('/aboutApp', {
       templateUrl: 'partials/aboutApp',
       controller: 'HelpCtrl',
-      depth: 3
+      depth: 4
     }).
     when('/specials', {
       templateUrl: 'partials/menuItems',
