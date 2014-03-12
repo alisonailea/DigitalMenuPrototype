@@ -1,20 +1,25 @@
-<h2>{{pageName}}</h2>
-<ul class="menulist">
-	<li ng-repeat='item in menuList'>
-		<div class="menu-list-img" data-url="{{item.imgUrl}}">
-			<img src="{{item.imgUrl}}" alt="">
-		</div>
-		<div class="menu-list-container">
-			<div class="title">{{item.name}}</div>
-			<div class="description">{{item.description}}</div>
-			<div class="meta-data">
-				<div class="quantity" ng-bind="getQuantity(item.id)">{{item.quantity}}</div>
-				<div class="cost">{{item.cost}}</div>
+<ng-include src="'/partials/header'"></ng-include>
+
+<div class="app-content">
+	<ul class="menulist">
+		<li ng-repeat='item in menuList'>
+			<div class="menu-list-img" data-url="{{item.imgUrl}}">
+				<img src="{{item.imgUrl}}" alt="">
 			</div>
-			<div class="add-remove">
-				<button class="order" ng-click="addToOrder(item.id, item.name, item.cost)"><span class="icon-add-to-list"></span>add</button>
-				<button class="removeQuantity" ng-click="removeFromOrder(item.id)" ng-show="getQuantity(item.id)">remove</button>
+			<div class="menu-list-container">
+				<div class="title">{{item.name}}</div>
+				<div class="description">{{item.description}}</div>
+				<div class="meta-data">
+					<div class="quantity" ng-bind="getQuantity(item.id)">{{item.quantity}}</div>
+					<div class="cost">{{item.cost}}</div>
+				</div>
+				<div class="add-remove">
+					<button class="order" ng-click="addToOrder(item.id, item.name, item.cost)"><span class="icon-add-to-list"></span>add</button>
+					<button class="removeQuantity" ng-click="removeFromOrder(item.id)" ng-show="getQuantity(item.id)">remove</button>
+				</div>
 			</div>
-		</div>
-	</li>
-</ul>
+		</li>
+	</ul>
+</div>
+
+<ng-include src="'/partials/footer'"></ng-include>

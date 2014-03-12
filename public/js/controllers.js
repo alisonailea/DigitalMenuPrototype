@@ -3,7 +3,7 @@
 /* Controllers */
 angular.module('myApp.controllers', ['ngTouch']).
   /* Global Logic for the Application */
-  controller('AppCtrl', function ($scope, $http, $location) {
+  controller('AppCtrl', function ($scope, $http, $location, $window) {
     /* Service to get Data from the back end server.
        This is currently a placeholder */
     $http({
@@ -47,7 +47,6 @@ angular.module('myApp.controllers', ['ngTouch']).
       table=table.replace('table=', '');
     }
     
-
     /* Global Application Variables*/
     /* NOTE: With Angular all variables that you want to reference 
        in the HTML Model they have to start with $scope.
@@ -59,11 +58,16 @@ angular.module('myApp.controllers', ['ngTouch']).
     $scope.isHome = true;
     $scope.waitStaffCall = false;
     $scope.callWaiterClass = '';
+    $scope.animateRoute = '';
 
+    
     /* Global Application Functions */
     /* NOTE: With Angular all variables that you want to reference 
        in the HTML Model they have to start with $scope.
        Read more about Angular $scope at http://angularjs.org/ */
+    $scope.goBack = function(){
+      $window.history.back();
+    };
 
     var checkClick = function(element){
       // When bound to document it listens 

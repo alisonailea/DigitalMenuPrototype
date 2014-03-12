@@ -19,51 +19,78 @@ config(function ($routeProvider, $locationProvider) {
   $routeProvider.
     when('/', {
       templateUrl: 'partials/home',
-      controller: 'HomeCtrl'
+      controller: 'HomeCtrl',
+      depth: 1
     }).
     when('/home', {
       templateUrl: 'partials/home',
-      controller: 'HomeCtrl'
+      controller: 'HomeCtrl',
+      depth: 1
     }).
     when('/about', {
       templateUrl: 'partials/about',
-      controller: 'AboutCtrl'
+      controller: 'AboutCtrl',
+      depth: 3
     }).
     when('/aboutApp', {
       templateUrl: 'partials/aboutApp',
-      controller: 'HelpCtrl'
+      controller: 'HelpCtrl',
+      depth: 3
     }).
     when('/specials', {
       templateUrl: 'partials/menuItems',
-      controller: 'SpecialCtrl'
+      controller: 'SpecialCtrl',
+      depth: 2
     }).
     when('/appetizer', {
       templateUrl: 'partials/menuItems',
-      controller: 'AppetizerCtrl'
+      controller: 'AppetizerCtrl',
+      depth: 2
     }).
     when('/entrees', {
       templateUrl: 'partials/menuItems',
-      controller: 'EntreeCtrl'
+      controller: 'EntreeCtrl',
+      depth: 2
     }).
     when('/desserts', {
       templateUrl: 'partials/menuItems',
-      controller: 'DessertCtrl'
+      controller: 'DessertCtrl',
+      depth: 2
     }).
     when('/drinks', {
       templateUrl: 'partials/menuItems',
-      controller: 'DrinkCtrl'
+      controller: 'DrinkCtrl',
+      depth: 2
     }).
     when('/reviewOrder', {
       templateUrl: 'partials/reviewOrder',
-      controller: 'ReviewOrderCtrl'
+      controller: 'ReviewOrderCtrl',
+      depth: 3
     }).
     when('/confirmOrder', {
       templateUrl: 'partials/confirmOrder',
-      controller: 'ConfirmOrderCtrl'
+      controller: 'ConfirmOrderCtrl',
+      depth: 4
     }).
     otherwise({
       redirectTo: '/home'
     });
 
   $locationProvider.html5Mode(true);
+}).
+
+run(function($rootScope, $window){
+  $rootScope.direction = 'ltr';
+  // listen change start events
+  $rootScope.$on('$routeChangeStart', function(event, next, current) {
+    $rootScope.direction = 'rtl';
+   // console.log(arguments);
+    if (current && next && (current.depth > next.depth)) {
+      $rootScope.direction = 'ltr';  
+    }
+    // back
+    $rootScope.back = function() {
+      $window.history.back();
+    }
+  });
 });

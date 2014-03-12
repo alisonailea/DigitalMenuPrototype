@@ -1017,9 +1017,15 @@ ul li {
       color: #333;
       border-color: #666; }
 
+.appContainer {
+  position: relative;
+  height: 100%;
+  overflow: hidden; }
+
 .app-content {
-  position: absolute;
-  top: 38px;
+  position: relative;
+  top: 0px;
+  left: 0px;
   width: 100%;
   padding: 10px;
   line-height: 18px;
@@ -1027,23 +1033,33 @@ ul li {
   overflow-y: scroll;
   min-width: 320px; }
 
-.app-content.ng-enter, .app-content.ng-leave {
-  -webkit-transition: all cubic-bezier(0.25, 0.46, 0.45, 0.94) 1.5s;
-  transition: all cubic-bezier(0.25, 0.46, 0.45, 0.94) 1.5s;
+.app-animate.ng-enter, .app-animate.ng-leave {
+  -webkit-transition: all cubic-bezier(0.25, 0.46, 0.45, 0.94) 0.3s;
+  transition: all cubic-bezier(0.25, 0.46, 0.45, 0.94) 0.3s;
   display: block;
   width: 100%;
-  border-left: 1px solid black;
   position: absolute;
   top: 0;
   left: 0;
   right: 0;
-  bottom: 0;
-  padding: 10px; }
-.app-content.ng-enter {
-  left: 100%; }
-  .app-content.ng-enter.ng-enter-active {
-    left: 0; }
-.app-content.ng-leave.ng-leave-active {
-  left: -100%; }
+  bottom: 0; }
+
+.rtl .app-animate.ng-enter {
+  -webkit-transform: translate3d(100%, 0, 0); }
+
+.rtl .app-animate.ng-enter.ng-enter-active {
+  -webkit-transform: translate3d(0, 0, 0); }
+
+.rtl .app-animate.ng-leave.ng-leave-active {
+  -webkit-transform: translate3d(-100%, 0, 0); }
+
+.ltr .app-animate.ng-enter {
+  -webkit-transform: translate3d(-100%, 0, 0); }
+
+.ltr .app-animate.ng-enter.ng-enter-active {
+  -webkit-transform: translate3d(0, 0, 0); }
+
+.ltr .app-animate.ng-leave.ng-leave-active {
+  -webkit-transform: translate3d(100%, 0, 0); }
 
 /*@ sourceMappingURL=app.css.map */

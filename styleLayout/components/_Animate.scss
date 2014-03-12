@@ -1,37 +1,33 @@
 // These are the Animation Rules
-
-.slideRight-oldPage, .slideRight-newPage{
-	&.ng-enter, &.ng-leave{
-	-webkit-transition:all cubic-bezier(0.250, 0.460, 0.450, 0.940) 1.5s;
-	transition:all cubic-bezier(0.250, 0.460, 0.450, 0.940) 1.5s;
-	}
-	&.ng-enter{
-		left:100%;
-		&.ng-enter-active {
-			left:0;
-		}
-	}
-	&.ng-leave{
-		&.ng-leave-active{
-			left:-100%;
-		}
-	}
+.app-animate.ng-enter, .app-animate.ng-leave {
+  -webkit-transition:all cubic-bezier(0.250, 0.460, 0.450, 0.940) 0.3s;
+  transition:all cubic-bezier(0.250, 0.460, 0.450, 0.940) 0.3s;
+ 
+  display:block;
+  width:100%;
+  
+  position:absolute;
+  top:0;
+  left:0;
+  right:0;
+  bottom:0;
 }
-
-.slideLeft{
-	&.ng-enter, &.ng-leave{
-	-webkit-transition:all cubic-bezier(0.250, 0.460, 0.450, 0.940) 1.5s;
-	transition:all cubic-bezier(0.250, 0.460, 0.450, 0.940) 1.5s;
-	}
-	&.ng-enter{
-		left:100%;
-		&.ng-enter-active {
-			left:0;
-		}
-	}
-	&.ng-leave{
-		&.ng-leave-active{
-			left:-100%;
-		}
-	}
+ 
+.rtl .app-animate.ng-enter {
+  -webkit-transform: translate3d(100%, 0, 0);
+}
+.rtl .app-animate.ng-enter.ng-enter-active {
+  -webkit-transform: translate3d(0, 0, 0);
+}
+.rtl .app-animate.ng-leave.ng-leave-active {
+  -webkit-transform: translate3d(-100%, 0, 0);
+}
+.ltr .app-animate.ng-enter {
+  -webkit-transform: translate3d(-100%, 0, 0);
+}
+.ltr .app-animate.ng-enter.ng-enter-active {
+  -webkit-transform: translate3d(0, 0, 0);
+}
+.ltr .app-animate.ng-leave.ng-leave-active {
+  -webkit-transform: translate3d(100%, 0, 0);
 }
