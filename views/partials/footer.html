@@ -1,0 +1,9 @@
+<div class="footer">
+	<div>
+		<a href="/about"><span class="icon-info"></span><br>About</a>
+	</div>
+	<div>
+		<a ng-hide="waiterCalled()" ng-click="callWaiter(true, 'call')"><span class="icon-user"></span><br>Call your Host</a>
+			<a ng-show="waiterCalled()" ng-click="callWaiter(false, 'noCall')"><span class="icon-users"></span><br>Cancel Call to your Host</a>
+	</div>
+</div>
