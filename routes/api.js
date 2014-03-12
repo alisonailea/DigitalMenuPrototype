@@ -25,24 +25,24 @@ exports.menu = function (req, res) {
 			'specials': [
 				{
 					'id': 001,
-					'name': 'Hummus',
-					'imgUrl': 'img/appetizer/Mushrooms.jpg',
+					'name': 'Nachos',
+					'imgUrl': 'img/specials/Nachos.png',
 					'description': 'Nunc pretium lectus augue, eget tincidunt arcu suscipit et. Donec vitae nisl in ante condimentum sollicitudin vel id elit.',
 					'cost': '6.00',
 					'quantity': 0
 				},
 				{
 					'id': 002,
-					'name': 'Special2',
-					'imgUrl': 'img/appetizer/GarlicBread.jpg',
+					'name': 'Chicken',
+					'imgUrl': 'img/specials/Chicken.png',
 					'description': 'Nunc pretium lectus augue, eget tincidunt arcu suscipit et. Donec vitae nisl in ante condimentum sollicitudin vel id elit.',
 					'cost': '5.50',
 					'quantity': 0
 				},
 				{
 					'id': 003,
-					'name': 'Special3',
-					'imgUrl': 'img/appetizer/Antipasto.jpg',
+					'name': 'Chocolate Martini',
+					'imgUrl': 'img/specials/ChocolateMartini.png',
 					'description': 'Nunc pretium lectus augue, eget tincidunt arcu suscipit et. Donec vitae nisl in ante condimentum sollicitudin vel id elit.',
 					'cost': '5.00',
 					'quantity': 0

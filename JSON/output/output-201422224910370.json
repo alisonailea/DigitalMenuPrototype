@@ -1,0 +1,24 @@
+{
+    "table number": "",
+    "total": "45.88",
+    "items": [
+        {
+            "id": 5,
+            "name": "Garlic Bread",
+            "cost": "5.50",
+            "quantity": 1
+        },
+        {
+            "id": 4,
+            "name": "Stuffed Mushrooms",
+            "cost": "6.00",
+            "quantity": 1
+        },
+        {
+            "id": 8,
+            "name": "Eggplant Parmigiana",
+            "cost": "14.49",
+            "quantity": 1
+        }
+    ]
+}
