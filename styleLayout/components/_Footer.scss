@@ -1,0 +1,31 @@
+.footer{
+    position: absolute;
+    bottom: 0;
+    width: 100%; 
+    min-width: 320px;
+    background-color: $backgroundColor-main;
+    
+    border-top: 1px solid $font-color-grey;
+    font-size: $small-font-size;
+    @include display(flex); 
+    @include flex-direction(row);
+    @include align-items(center);
+    @include justify-content(space-between);
+    
+    div{
+        @include flex(1);
+        text-align: center;
+        padding: 5px 10px;
+        border-right: 1px solid lighten($font-color-grey, 20%);
+        &:last-child{
+            border-right: 0;
+        }
+    }
+    a {
+        color: $font-color-medium;
+        text-decoration: none;
+    }
+    span{
+        font-size: $default-font-size;
+    }
+}

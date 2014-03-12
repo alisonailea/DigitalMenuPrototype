@@ -1,0 +1,19 @@
+.Home{
+	.helpBtn {
+		position: relative;
+		top: 5px;
+		right: 5px;
+		float: right;
+		width: 21px;
+		font-size: 21px;
+		
+		a, a:link {
+			color: #333;
+			text-decoration: none;
+		}
+		a:hover, a:active {
+			text-decoration: none;
+			color: #666;
+		}
+	}
+}

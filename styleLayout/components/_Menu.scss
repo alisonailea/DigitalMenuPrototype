@@ -73,15 +73,46 @@
 			text-align: center;
 			margin-top: 10px;
 			box-shadow: none;
-			span{
-				font-size: 16px;
-			}
 			
 			&:hover{
+				background-color: transparent;
+				font-weight: normal;
+				border: 0;
+			}
+			&:focus{
+				background-color: transparent;
+				outline-color: transparent;
+				outline-width: 0;
+			}
+			
+			&.add-to-order{
+				padding-left: 26px;
+				margin-right: 10px;
+				margin-bottom: 10px;
+			}
+			&.add-to-order, &.enable{
+				&:hover{
 				background-color: #c2c2c2;
 				font-weight: normal;
 				border: 0;
-				
+				}
+				&:focus{
+					@include background(linear-gradient(red, green) left repeat);
+					outline-color: #999;
+					outline-width: 0;
+				}
+			}
+			&.removeQuantity{
+				color: #999;
+				&.enable{
+					color: #333;
+				}
+			}
+			span{
+				display: block;
+				position: absolute;
+				margin: 1px 0 0 -20px;
+				font-size: 16px;
 			}
 		}
 		.title{

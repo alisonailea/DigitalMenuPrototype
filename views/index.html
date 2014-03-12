@@ -14,7 +14,7 @@
 	<body ng-controller="AppCtrl" ng-init="callWaiter(false, 'cancelCall')">
 		<div class="app">
 			
-		    <div class="appContainer" ng-class="direction">
+		    <div class="appContainer {{pageName}}" ng-class="direction">
 		    	<div class="app-animate" ng-view>
 
 		    	</div>
@@ -31,7 +31,8 @@
 	    		<li ng-repeat='link in linkList'>
  					<a href="{{link.location}}">{{link.name}}</a>
  				</li>
-				<li>close</li>
+ 				<li><a href="/reviewOrder">Review Your Order</a></li>
+				<li><a>Close</a></li>
 	       </ul>
 	    </div>
 

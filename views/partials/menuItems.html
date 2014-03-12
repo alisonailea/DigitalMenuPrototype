@@ -14,8 +14,8 @@
 					<div class="cost">{{item.cost}}</div>
 				</div>
 				<div class="add-remove">
-					<button class="order" ng-click="addToOrder(item.id, item.name, item.cost)"><span class="icon-add-to-list"></span>add</button>
-					<button class="removeQuantity" ng-click="removeFromOrder(item.id)" ng-show="getQuantity(item.id)">remove</button>
+					<button class="order add-to-order" ng-click="addToOrder(item.id, item.name, item.cost)"><span class="icon-add-to-list"></span>add</button>
+					<button class="removeQuantity" ng-click="removeFromOrder(item.id)" ng-class="{enable: getQuantity(item.id)}">remove</button>
 				</div>
 			</div>
 		</li>

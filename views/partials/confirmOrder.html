@@ -1,13 +1,13 @@
 
 <h2>{{pageName}}</h2>
-<p>Thank you for placing the order!</p>
+<hr>
+<p class="align-center">Thank you for placing your order!</p>
 <ul>
     <li class="order-list-items" ng-repeat='item in orderItems'>
-		{{item.quantity}} <span class="grey-color">|</span> {{item.name}}
+		<strong>{{item.quantity}}</strong> <span class="grey-color">|</span> {{item.name}}
 	</li>
 </ul>
-<p>Your order is placed! Our Kitchen has started work on your order already.</p>
-</p>
+<p class="align-center">Your order is placed! Our Kitchen has started work on your order already.</p>
 
 <!-- <a ng-click="startOver()">Click Here to Place a new order</a> -->
 <ng-include src="'/partials/footer'"></ng-include>

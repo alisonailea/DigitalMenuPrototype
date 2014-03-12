@@ -2,7 +2,7 @@
 
 <div class="app-content">
 	<ul>
-		<li> Your Current Order </li>
+		<li><h3>Your Current Order</h3></li>
 	    <li class="order-list-items" ng-repeat='item in orderItems'>
    			{{item.quantity}} <span class="grey-color">|</span> {{item.name}} - &#36;{{item.cost}} 
    		</li>
@@ -20,3 +20,4 @@
 		Please try again, or contact one of our waitstaff.
 	</div>
 </div>
+<ng-include src="'/partials/footer'"></ng-include>
