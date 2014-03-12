@@ -1,16 +1,16 @@
 // These are the Animation Rules
-.app-animate.ng-enter, .app-animate.ng-leave {
-  -webkit-transition:all cubic-bezier(0.250, 0.460, 0.450, 0.940) 0.3s;
-  transition:all cubic-bezier(0.250, 0.460, 0.450, 0.940) 0.3s;
- 
+.app-animate{
   display:block;
   width:100%;
-  
   position:absolute;
   top:0;
   left:0;
   right:0;
   bottom:0;
+}
+.app-animate.ng-enter, .app-animate.ng-leave {
+  -webkit-transition:all cubic-bezier(0.250, 0.460, 0.450, 0.940) 0.3s;
+  transition:all cubic-bezier(0.250, 0.460, 0.450, 0.940) 0.3s;
 }
  
 .rtl .app-animate.ng-enter {

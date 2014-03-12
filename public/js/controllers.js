@@ -42,6 +42,7 @@ angular.module('myApp.controllers', ['ngTouch']).
 
     var tableTest = /table=/;
     var table = window.location.search.substring(1);
+    var tableHash = table;
     var isTable = tableTest.test(table);
     if (isTable){
       table=table.replace('table=', '');
@@ -67,6 +68,14 @@ angular.module('myApp.controllers', ['ngTouch']).
        Read more about Angular $scope at http://angularjs.org/ */
     $scope.goBack = function(){
       $window.history.back();
+    };
+
+    $scope.startOver = function(){
+      if(isTable){
+        $location.path('/home'+ tableHash);
+      } else{
+        $location.path('/home');
+      }
     };
 
     var checkClick = function(element){

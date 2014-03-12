@@ -5,11 +5,11 @@
 }
 
 .app-content{
-	position: relative;
+	position: absolute;
 	top: 0px;
 	left: 0px;
 	width: 100%; 
-    padding: 10px;
+    padding: $header-height 10px 10px 10px;
     line-height: 18px;
     height: 100%;
     overflow-y: scroll;

@@ -1,18 +1,21 @@
+<ng-include src="'/partials/header2'"></ng-include>
+
 <div class="app-content">
-<h2>{{pageName}}</h2>
-<p>Here's your order. <br>Make sure everything looks good. As soon as you click the 'Send Your Order' button your order will whisked away to the kitchen where our talented chef awaits.
-<ul>
-    <li ng-repeat='item in orderItems'>
-		{{item.quantity}} <span class="grey-color">|</span> {{item.name}} - &#36;{{item.cost}} 
-	</li>
-</ul>
-<div class="total" ng-show="orderToolsShown()"><h3>Total: <span ng-bind="order.total"></span></h3></div>
-<div class="dividedBtn" ng-show="orderToolsShown()">
-	<button class="text" ng-click="resetOrder()">cancel Order</button>
-	<button class="text" ng-click="placeOrder()">send Order</button>
-</div>
-<div class="errorMsg" ng-show="orderError()">
-	Opps. There's been an error. 
-	Please try again, or contact one of our waitstaff.
-</div>
+	<ul>
+	    <li class="order-list-items" ng-repeat='item in orderItems'>
+   			{{item.quantity}} <span class="grey-color">|</span> {{item.name}} - &#36;{{item.cost}} 
+   		</li>
+   		<li class="order-list-items" ng-hide="orderToolsShown()">
+   			You haven't added anything new to your order yet. <a ng-click="goBack()">Go Back </a> and select items from our menu.
+		</li>
+	</ul>
+	<div class="total" ng-show="orderToolsShown()"><h3>Total: <span ng-bind="order.total"></span></h3></div>
+	<div class="dividedBtn" ng-show="orderToolsShown()">
+		<button class="text" ng-click="resetOrder()">cancel Order</button>
+		<button class="text" ng-click="placeOrder()">send Order</button>
+	</div>
+	<div class="errorMsg" ng-show="orderError()">
+		Opps. There's been an error. 
+		Please try again, or contact one of our waitstaff.
+	</div>
 </div>

@@ -5,6 +5,7 @@ html { font-size: $default-font-size-percentage;  }
 body { font-size: $default-font-size-px; font-size: $default-font-size; line-height: $default-line-height;} /* =14px */
 
 h1{ 
+    margin-top: 10px;
 	font-size: $h1-font-size;
 	font-weight: lighter;
 }

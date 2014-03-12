@@ -1,4 +1,4 @@
-<div class="app-content">
+
 <h2>{{pageName}}</h2>
 <p>Thank you for placing the order!</p>
 <ul>
@@ -6,6 +6,7 @@
 		{{item.quantity}} <span class="grey-color">|</span> {{item.name}}
 	</li>
 </ul>
-<p>Your order is placed!</p>
+<p>Your order is placed! Our Kitchen has started work on your order already.</p>
 </p>
-</div>
+
+<a ng-click="startOver()">Click Here to Place a new order</a>
