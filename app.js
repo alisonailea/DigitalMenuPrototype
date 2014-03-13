@@ -53,6 +53,8 @@ app.post('/json/output/output.json', function(req, res) {
     var fullFileName = fileName+'-'+setDate+format;
 	var data = JSON.stringify(req.body, null, 4);
     
+    console.log(req.body);
+
     fs.writeFile(fileLoc+fullFileName, data, function (err) {
 		if (err) throw err;
 		res.end();

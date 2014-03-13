@@ -1,12 +1,12 @@
 {
-    "table number": "",
-    "total": "18.00",
+    "table": "",
+    "total": "6.00",
     "items": [
         {
             "id": 4,
             "name": "Stuffed Mushrooms",
             "cost": "6.00",
-            "quantity": 3
+            "quantity": 1
         }
     ]
 }
