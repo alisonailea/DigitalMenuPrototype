@@ -1,0 +1,26 @@
+{
+    "table number": "",
+    "total": "30.99",
+    "items": [
+        {
+            "name": "Hummus",
+            "cost": "6.00",
+            "quantity": 1
+        },
+        {
+            "name": "Special2",
+            "cost": "5.50",
+            "quantity": 1
+        },
+        {
+            "name": "Special3",
+            "cost": "5.00",
+            "quantity": 1
+        },
+        {
+            "name": "Eggplant Parmigiana",
+            "cost": "14.49",
+            "quantity": 1
+        }
+    ]
+}

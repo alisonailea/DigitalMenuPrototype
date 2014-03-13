@@ -1,0 +1,16 @@
+{
+    "table number": "",
+    "total": "12.00",
+    "items": [
+        {
+            "name": "Lasagna Classico",
+            "cost": "15.99",
+            "quantity": 3
+        },
+        {
+            "name": "Eggplant Parmigiana",
+            "cost": "14.49",
+            "quantity": 1
+        }
+    ]
+}

@@ -310,20 +310,18 @@ angular.module('myApp.controllers', ['ngTouch']).
 
       /* Use Factory method services.js to make RESTful call to the server */
       var orderData = $scope.order;
-      console.log(orderData);
+      
       PostService.save(orderData, function(data) {
           $location.path('/confirmOrder');
 
           var returnedData = {};
-          console.log(data);
+
           for(var item in data){
             if(item === 'table' || item === 'total' || item === 'items'){
               returnedData[item] = data[item];
             }
           }
           $scope.reviewOrder.push(returnedData);
-
-          console.log($scope.reviewOrder);
 
           $scope.resetOrder();
       });

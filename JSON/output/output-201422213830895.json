@@ -1,0 +1,36 @@
+{
+    "table number": "",
+    "total": "121.93",
+    "items": [
+        {
+            "id": 1,
+            "name": "Hummus",
+            "cost": "6.00",
+            "quantity": 2
+        },
+        {
+            "id": 2,
+            "name": "Special2",
+            "cost": "5.50",
+            "quantity": 1
+        },
+        {
+            "id": 7,
+            "name": "Lasagna Classico",
+            "cost": "15.99",
+            "quantity": 2
+        },
+        {
+            "id": 8,
+            "name": "Eggplant Parmigiana",
+            "cost": "14.49",
+            "quantity": 3
+        },
+        {
+            "id": 9,
+            "name": "Fettuccine Alfredo",
+            "cost": "14.49",
+            "quantity": 2
+        }
+    ]
+}

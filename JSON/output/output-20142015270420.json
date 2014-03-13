@@ -1,0 +1,16 @@
+{
+    "table number": "",
+    "total": "11.50",
+    "items": [
+        {
+            "name": "Special2",
+            "cost": "5.50",
+            "quantity": 1
+        },
+        {
+            "name": "Hummus",
+            "cost": "6.00",
+            "quantity": 1
+        }
+    ]
+}
