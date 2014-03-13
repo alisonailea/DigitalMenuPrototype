@@ -107,6 +107,9 @@ body {
 .align-center {
   text-align: center; }
 
+.align-center {
+  text-align: center; }
+
 @media screen and (min-width: 400px) {
   .btn {
     background-color: blue; } }

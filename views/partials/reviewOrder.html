@@ -7,7 +7,7 @@
    			{{item.quantity}} <span class="grey-color">|</span> {{item.name}} - &#36;{{item.cost}} 
    		</li>
    		<li class="order-list-items no-order" ng-hide="orderToolsShown()">
-   			You haven't added anything new to your order yet. <a ng-click="goBack()">Go Back </a> and select items from our menu.
+   			You haven't added anything new to your current order yet. <a ng-click="goBack()">Go Back </a> and select items from our menu.
 		</li>
 		<li class="total" ng-show="orderToolsShown()">
 			<h3>Total: <span ng-bind="order.total"></span></h3>
@@ -15,8 +15,8 @@
 	</ul>
 	
 	<div class="dividedBtn" ng-show="orderToolsShown()">
-		<button class="text" ng-click="resetOrder()">cancel Order</button>
-		<button class="text" ng-click="placeOrder()">send Order</button>
+		<button class="text" ng-click="resetOrder()">Cancel Order</button>
+		<button class="text" ng-click="placeOrder()">Send Order</button>
 	</div>
 	<ul class="previous-order" ng-show="hasPreviousOrder()">
 	    <li><h3>Your Previous Orders</h3></li>

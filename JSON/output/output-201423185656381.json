@@ -1,10 +1,10 @@
 {
     "table": "",
-    "total": "5.50",
+    "total": "6.00",
     "items": [
         {
-            "id": 4,
-            "name": "Stuffed Mushrooms",
+            "id": 1,
+            "name": "Nachos",
             "cost": "6.00",
             "quantity": 1
         }
