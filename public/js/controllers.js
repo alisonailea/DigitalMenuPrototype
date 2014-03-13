@@ -53,7 +53,7 @@ angular.module('myApp.controllers', ['ngTouch']).
        in the HTML Model they have to start with $scope.
        Read more about Angular $scope at http://angularjs.org/ */
     $scope.orderItems = [];
-    $scope.order = {'table number': table, total: '0.00', items: $scope.orderItems};
+    $scope.order = {table: table, total: '0.00', items: $scope.orderItems};
     $scope.reviewOrder = [];
     $scope.pageName = 'Home';
     $scope.isHome = true;
@@ -236,6 +236,14 @@ angular.module('myApp.controllers', ['ngTouch']).
       }
     };
 
+    $scope.hasPreviousOrder = function(){
+      if(typeof $scope.reviewOrder[0] === 'undefined'){
+        return false;
+      } else {
+        return true;
+      }
+    };
+
   }).
   /* Logic specific to the Home page. */
   controller('HomeCtrl', function ($scope) {
@@ -300,9 +308,20 @@ angular.module('myApp.controllers', ['ngTouch']).
 
       /* Use Factory method services.js to make RESTful call to the server */
       var orderData = $scope.order;
+      
       PostService.save(orderData, function(data) {
           $location.path('/confirmOrder');
-          $scope.reviewOrder.push(orderData);
+
+          var returnedData = {};
+
+          for(var item in data){
+            if(item === 'table' || item === 'total' || item === 'items'){
+              returnedData[item] = data[item];
+            }
+          }
+          $scope.reviewOrder.push(returnedData);
+
+          $scope.resetOrder();
       });
     };
   }).
