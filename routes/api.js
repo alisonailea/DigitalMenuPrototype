@@ -27,15 +27,15 @@ exports.menu = function (req, res) {
 					'id': 001,
 					'name': 'Nachos',
 					'imgUrl': 'img/specials/Nachos.png',
-					'description': 'Nunc pretium lectus augue, eget tincidunt arcu suscipit et. Donec vitae nisl in ante condimentum sollicitudin vel id elit.',
+					'description': 'Tortilla chips topped with melted cheese, sliced chile peppers, sliced black olives, and chili sauce.',
 					'cost': '6.00',
 					'quantity': 0
 				},
 				{
 					'id': 002,
-					'name': 'Chicken',
+					'name': 'Chicken Cordon Bleu',
 					'imgUrl': 'img/specials/Chicken.png',
-					'description': 'Nunc pretium lectus augue, eget tincidunt arcu suscipit et. Donec vitae nisl in ante condimentum sollicitudin vel id elit.',
+					'description': 'Breaded chicken breasts baked with provolone cheese and marinara sauce..',
 					'cost': '5.50',
 					'quantity': 0
 				},
@@ -43,7 +43,7 @@ exports.menu = function (req, res) {
 					'id': 003,
 					'name': 'Chocolate Martini',
 					'imgUrl': 'img/specials/ChocolateMartini.png',
-					'description': 'Nunc pretium lectus augue, eget tincidunt arcu suscipit et. Donec vitae nisl in ante condimentum sollicitudin vel id elit.',
+					'description': 'Chocolate syrup and garnished with maraschino cherries..',
 					'cost': '5.00',
 					'quantity': 0
 				}
@@ -53,7 +53,7 @@ exports.menu = function (req, res) {
 					'id': 004,
 					'name': 'Stuffed Mushrooms',
 					'imgUrl': 'img/appetizer/Mushrooms.jpg',
-					'description': 'Nunc pretium lectus augue, eget tincidunt arcu suscipit et. Donec vitae nisl in ante condimentum sollicitudin vel id elit.',
+					'description': 'Mushrooms, stuffed with fresh spinach, romano cheese tooped with lemon creamy sauce .',
 					'cost': '6.00',
 					'quantity': 0
 				},
@@ -61,7 +61,7 @@ exports.menu = function (req, res) {
 					'id': 005,
 					'name': 'Garlic Bread',
 					'imgUrl': 'img/appetizer/GarlicBread.jpg',
-					'description': 'Nunc pretium lectus augue, eget tincidunt arcu suscipit et. Donec vitae nisl in ante condimentum sollicitudin vel id elit.',
+					'description': 'Crispy breadsticks with Garlic and parsley leaves.',
 					'cost': '5.50',
 					'quantity': 0
 				},
@@ -69,7 +69,7 @@ exports.menu = function (req, res) {
 					'id': 006,
 					'name': 'Antipasto',
 					'imgUrl': 'img/appetizer/Antipasto.jpg',
-					'description': 'Nunc pretium lectus augue, eget tincidunt arcu suscipit et. Donec vitae nisl in ante condimentum sollicitudin vel id elit.',
+					'description': 'Jarred roasted red and yellow peppers, garlic hummus and pita bread.',
 					'cost': '5.00',
 					'quantity': 0
 				}

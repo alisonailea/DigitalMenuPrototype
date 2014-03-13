@@ -1,0 +1,12 @@
+{
+    "table number": "",
+    "total": "18.00",
+    "items": [
+        {
+            "id": 1,
+            "name": "Nachos",
+            "cost": "6.00",
+            "quantity": 3
+        }
+    ]
+}
