@@ -98,6 +98,9 @@ body {
   height: 100%;
   width: 100%; }
 
+.align-center {
+  text-align: center; }
+
 @media screen and (min-width: 400px) {
   .btn {
     background-color: blue; } }
@@ -188,6 +191,9 @@ h2 {
   text-transform: uppercase;
   margin-bottom: 1.071rem; }
 
+h3 {
+  margin-bottom: 0px; }
+
 /* Color Rules */
 body {
   background-color: #f2f2f2;
@@ -195,6 +201,9 @@ body {
 
 .grey-color {
   color: #999999; }
+
+ul {
+  padding-left: 0; }
 
 ul li {
   list-style: none; }
@@ -781,8 +790,6 @@ ul li {
   padding: 0 10px; }
   .Confirmed ul {
     margin-bottom: 20px; }
-  .Confirmed .align-center {
-    text-align: center; }
 
 .menulist {
   display: -webkit-box;
@@ -1112,5 +1119,18 @@ ul li {
   .Home .helpBtn a:hover, .Home .helpBtn a:active {
     text-decoration: none;
     color: #666; }
+
+.Review .no-order {
+  padding-left: 40px; }
+.Review .current-order li:first-child {
+  text-align: center; }
+.Review .current-order li:last-child {
+  text-align: right; }
+
+.previous-order h3 {
+  color: #666; }
+
+.order-list-items ul li:last-child {
+  text-align: right; }
 
 /*@ sourceMappingURL=app.css.map */

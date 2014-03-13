@@ -36,6 +36,10 @@ body {
     width: 100% /* needed for Firefox */
 }
 
+.align-center{
+        text-align: center;
+    }
+
 .btn{
     @media screen and (min-width: 400px){
         background-color: blue;

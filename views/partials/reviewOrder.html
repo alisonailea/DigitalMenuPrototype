@@ -1,20 +1,36 @@
 <ng-include src="'/partials/header2'"></ng-include>
 
 <div class="app-content">
-	<ul>
+	<ul class="current-order">
 		<li><h3>Your Current Order</h3></li>
 	    <li class="order-list-items" ng-repeat='item in orderItems'>
    			{{item.quantity}} <span class="grey-color">|</span> {{item.name}} - &#36;{{item.cost}} 
    		</li>
-   		<li class="order-list-items" ng-hide="orderToolsShown()">
+   		<li class="order-list-items no-order" ng-hide="orderToolsShown()">
    			You haven't added anything new to your order yet. <a ng-click="goBack()">Go Back </a> and select items from our menu.
 		</li>
+		<li class="total" ng-show="orderToolsShown()">
+			<h3>Total: <span ng-bind="order.total"></span></h3>
+		</li>
 	</ul>
-	<div class="total" ng-show="orderToolsShown()"><h3>Total: <span ng-bind="order.total"></span></h3></div>
+	
 	<div class="dividedBtn" ng-show="orderToolsShown()">
 		<button class="text" ng-click="resetOrder()">cancel Order</button>
 		<button class="text" ng-click="placeOrder()">send Order</button>
 	</div>
+	<ul class="previous-order" ng-show="hasPreviousOrder()">
+	    <li><h3>Your Previous Orders</h3></li>
+	    <li class="order-list-items" ng-repeat="items in reviewOrder">
+	    	<ul>
+	    		<li ng-repeat="item in items.items">
+	    			{{item.quantity}} <span class="grey-color">|</span> {{item.name}} - &#36;{{item.cost}}
+	    		</li>
+	    		<li>{{items.total}}</li>
+	    	</ul> 
+   		</li>
+   		
+	</ul>
+	
 	<div class="errorMsg" ng-show="orderError()">
 		Opps. There's been an error. 
 		Please try again, or contact one of our waitstaff.

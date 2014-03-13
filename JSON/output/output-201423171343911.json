@@ -1,0 +1,18 @@
+{
+    "table": "",
+    "total": "5.50",
+    "items": [
+        {
+            "id": 2,
+            "name": "Special2",
+            "cost": "5.50",
+            "quantity": 1
+        },
+        {
+            "id": 3,
+            "name": "Special3",
+            "cost": "5.00",
+            "quantity": 2
+        }
+    ]
+}

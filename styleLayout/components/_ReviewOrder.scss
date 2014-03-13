@@ -1,0 +1,26 @@
+.Review{
+	.no-order{
+		padding-left: 40px;
+	}
+
+	.current-order{
+		li:first-child{
+			text-align: center;
+		}
+		li:last-child{
+			text-align: right;
+		}
+	}
+}
+
+.previous-order{
+	h3{ color: #666; }
+}
+
+.order-list-items{
+	ul{
+		li:last-child{
+			text-align: right;
+		}
+	}
+}
